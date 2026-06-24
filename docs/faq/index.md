@@ -20,11 +20,11 @@ Sur l'écran de connexion, cliquez sur **Mot de passe oublié** et suivez l'emai
 
 ### Comment créer une facture ?
 
-Voir le parcours [De la vente à la facture](/modules/facturation/parcours/vente-a-facture).
+Voir [Créer une facture](/modules/facturation/creer-facture).
 
 ### Comment certifier une facture au Bénin ?
 
-Voir [Certification fiscale](/modules/facturation/parcours/certification-fiscale).
+Voir [Configurer e-MECeF](/modules/facturation/certification-fiscale) puis [Finaliser une facture](/modules/facturation/finaliser-facture).
 
 ## Stock
 
@@ -36,7 +36,7 @@ Vérifiez que la vente est **finalisée** (facture validée ou session POS ferm�
 
 ### Comment payer les salaires par mobile ?
 
-Voir [Payer les employés](/modules/rh/parcours/payer-employes) et [Paiements PAL](/administration/paiements-pal).
+Voir [Paie](/modules/rh/paie) et [Paiements PAL](/administration/paiements-pal).
 
 ## Technique (utilisateur)
 

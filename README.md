@@ -9,7 +9,7 @@ user-docs/
 ├── docs/
 │   ├── accueil.md                 # Page d'accueil
 │   ├── premiers-pas/              # 🚀 8 articles
-│   ├── modules/                   # 📦 12 modules + parcours métier
+│   ├── modules/                   # 📦 modules → une page par action
 │   ├── administration/            # ⚙️ 4 articles
 │   ├── conformite-fiscalite/      # 🇧🇯 3 articles
 │   ├── faq/                       # ❓ FAQ

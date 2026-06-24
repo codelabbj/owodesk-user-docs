@@ -1,18 +1,18 @@
-# E-commerce & Marketplace
+---
+sidebar_position: 0
+---
 
-Exposez vos produits en ligne et recevez des contacts clients via WhatsApp.
+# E-Commerce
 
-## Sections principales
+Boutique en ligne, gestion des produits, livraison et commandes.
 
-- **Vue d'ensemble** — Statistiques boutique
-- **Produits publiés** — Catalogue en ligne
-- **Intents contact** — Demandes clients WhatsApp
-- **Paramètres boutique** — Logo, lien public, géolocalisation
+**Fonctionnalites principales :**
 
-## Routage WhatsApp
+- **Configuration boutique** : nom, sous-domaine, logo, couleurs, moyens de paiement
+- **Publication de produits** : liaison stock, prix personnalise, visibilite
+- **Zones de livraison** : villes desservies, prix fixe, delais
+- **Methodes de livraison** : livraison, retrait, express
+- **Gestion des commandes** : suivi des statuts, paiement, lien CRM
+- **Codes promo** : pourcentage, montant fixe, limite d'utilisations
 
-Les demandes clients peuvent être dirigées vers l'**entrepôt le plus proche** selon la position du visiteur.
-
-## Parcours métier
-
-- [Vendre en ligne](/modules/ecommerce/parcours/vendre-en-ligne) — Boutique publique, produits et contacts WhatsApp
+Choisissez dans le menu l'action a realiser.

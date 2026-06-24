@@ -1,20 +1,19 @@
-# Stock & inventaire
+---
+sidebar_position: 1
+---
 
-Gérez vos produits, entrepôts et mouvements de stock.
+# Stock inventaire
 
-## Sections principales
+Le module Stock gere vos produits, entrepots, niveaux de stock, mouvements et inventaires physiques.
 
-| Section | Usage |
-|---------|-------|
-| **Produits** | Catalogue articles et services |
-| **Entrepôts** | Lieux de stockage (avec adresse pour le routage marketplace) |
-| **Niveaux de stock** | Quantités par entrepôt |
-| **Mouvements** | Entrées, sorties, transferts |
-| **Achats** | Commandes fournisseurs et réceptions |
-| **Inventaire physique** | Comptage et ajustements |
-| **Réapprovisionnement** | Alertes et suggestions |
-| **Étiquettes** | Impression codes-barres |
+## Fonctionnalites
 
-## Parcours métier
-
-- [Gérer le stock](/modules/stock/parcours/gerer-stock) — Catalogue, entrepôts, mouvements et inventaire
+- **Categories de produits** — Organisation hierarchique des articles
+- **Produits** — Fiches completes avec SKU, prix, taxes, paliers de prix
+- **Variantes** — Tailles, couleurs et autres declinaisons avec prix specifiques
+- **Taxes** — Gestion des groupes de taxes (TVA, AIB, specifiques)
+- **Entrepots** — Multi-sites avec coordonnees GPS et parametres de vente
+- **Niveaux de stock** — Suivi des quantites par produit et entrepot
+- **Mouvements** — Entrees, sorties, transferts, ajustements, pertes
+- **Inventaire physique** — Sessions de comptage avec ecarts automatiques
+- **Regles de reapprovisionnement** — Seuils minimum et maximum avec alertes

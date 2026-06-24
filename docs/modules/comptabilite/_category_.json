@@ -1,5 +1,5 @@
 {
-  "label": "Comptabilité",
+  "label": "Comptabilite",
   "link": { "type": "doc", "id": "modules/comptabilite/index" },
-  "position": 5
+  "position": 7
 }

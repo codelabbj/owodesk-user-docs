@@ -1,5 +1,5 @@
 {
-  "label": "Projets",
+  "label": "Projets et tâches",
   "link": { "type": "doc", "id": "modules/projets/index" },
-  "position": 8
+  "position": 12
 }

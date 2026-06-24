@@ -1,15 +1,16 @@
-# Projets
+---
+sidebar_position: 0
+---
 
-Organisez le travail par projets et tâches.
+# Projets et tâches
 
-## Usage
+Organisation du travail par projets, taches, commentaires et suivi analytique.
 
-- Créer un **projet** (ex. : « Rénovation bureau »)
-- Ajouter des **tâches** avec statut et échéance
-- Suivre l'avancement par statut
+**Fonctionnalites principales :**
 
-Parcours détaillés à venir.
+- **Projets** : budget previsionnel, cout reel, suivi de marge, dates, manager
+- **Taches** : priorite, statut, echeance, assignation multiple, tags colores
+- **Commentaires** : mentions @collegue, notifications, lecture / non-lu
+- **Analytics** : budget vs cout reel, marge, total facture
 
-:::info À compléter
-Captures et bonnes pratiques de gestion de projet.
-:::
+Choisissez dans le menu ce que vous voulez faire.

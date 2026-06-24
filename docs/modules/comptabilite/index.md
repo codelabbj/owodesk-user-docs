@@ -1,22 +1,13 @@
-# Comptabilité
+---
+sidebar_position: 7
+---
 
-Suivez la santé financière : trésorerie, recettes, dépenses et rapports.
+# Comptabilite
 
-## Sections principales
+Plan comptable SYSCOHADA, journaux, ecritures, tresorerie, balance et rapports financiers.
 
-- **Trésorerie** — Soldes et flux de caisse
+Ce module couvre l'integralite de la comptabilite : de la configuration du plan comptable a la consultation des etats financiers, en passant par la saisie des ecritures et le suivi des echeances.
 
-<DocImage src="/img/guides/comptabilite/tresorerie.png" alt="Trésorerie" />
+Les ecritures comptables sont generees automatiquement par les modules Ventes, Achats et Depenses.
 
-- **Recettes** — Entrées d'argent liées aux ventes
-- **Dépenses** — Sorties (y compris via demandes internes)
-
-<DocImage src="/img/guides/comptabilite/depenses.png" alt="Dépenses" />
-
-- **Dettes** — Créances et dettes fournisseurs
-- **Rapports** — Synthèses et exports
-
-## Parcours liés
-
-- [Demande de décaissement](/modules/demandes-internes/parcours/demande-decaissement) — Les demandes approuvées peuvent générer une dépense
-- [De la vente à la facture](/modules/facturation/parcours/vente-a-facture) — Enregistrement des recettes après encaissement
+Choisissez dans le menu **l'action a realiser**.

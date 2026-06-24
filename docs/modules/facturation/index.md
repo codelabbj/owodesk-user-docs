@@ -1,19 +1,18 @@
+---
+sidebar_position: 1
+---
+
 # Facturation
 
-Créez des factures, devis et gérez la certification fiscale.
+Le module Facturation gere l'ensemble de vos documents commerciaux : factures, devis, paiements et certification fiscale e-MECeF.
 
-## Sections principales
+## Fonctionnalites
 
-- **Tableau de bord** — Vue synthétique
-- **Factures** — Création et suivi des factures clients
-- **Facture Pro** — Devis et propositions commerciales
-- **Certification** — e-MECeF (Bénin) via terminal MCF
-
-## Bon à savoir
-
-Les contacts clients se gèrent dans le **CRM** ; la facturation les réutilise.
-
-## Parcours métier
-
-- [De la vente à la facture](/modules/facturation/parcours/vente-a-facture) — Du contact client à la facture payée (CRM, stock, comptabilité)
-- [Certification fiscale (e-MECeF)](/modules/facturation/parcours/certification-fiscale) — Configuration, factures normalisées et conformité Bénin
+- **Clients** — Gestion des fiches clients avec IFU, coordonnees et adresse
+- **Factures** — Creation, finalisation simple ou normalisee, avoirs, factures export
+- **Devis** — Creation, envoi, acceptation et conversion en facture
+- **Paiements** — Encaissements totaux, partiels, en attente, cloture automatique
+- **Certification e-MECeF** — Conformite fiscale avec QR code et signature electronique
+- **Signature** — Signature electronique sur les documents
+- **Envoi par email** — Envoi de documents en PDF directement depuis le module
+- **Tableau de bord** — Impayes, encaissements du jour, factures en retard

@@ -1,22 +1,23 @@
+---
+sidebar_label: Demandes internes
+sidebar_position: 1
+---
+
 # Demandes internes
 
-Circuit de validation pour les besoins internes de l'entreprise.
+Le module Demandes internes permet de creer et de gerer des demandes de toute nature au sein de l'organisation : decaissements, fournitures, ressources humaines ou demandes libres.
 
 ## Types de demandes
 
-- **Décaissement** — Demande de fonds
-- **Fournitures** — Besoins matériels
-- **RH** — Congés, documents
-- **Autre** — Demandes diverses
+- **Decaissement** -- Demande de sortie de fonds avec montant, motif et mode de paiement
+- **Fourniture** -- Demande d'achat de materiel ou de fournitures avec liste d'articles
+- **RH** -- Demande liee aux ressources humaines (absence, formation, etc.)
+- **Autre** -- Demande libre sans format impose
 
-## Workflow
+## Fonctionnalites
 
-1. Un collaborateur **crée** une demande
-2. Un responsable **assigne** ou **valide**
-3. Si décaissement → peut générer une **dépense** en comptabilité
-
-## Parcours métier
-
-- [Demande de décaissement](/modules/demandes-internes/parcours/demande-decaissement) — Demande, validation et enregistrement comptable
-
-Voir aussi : [Demande de congé](/modules/rh/parcours/demande-conge) (module RH)
+- Creation de demande avec pieces jointes
+- Assignation d'un destinataire pour traitement
+- Circuit de validation avec transfert possible
+- Rejet motive ou cloture avec creation automatique de depense
+- Historique complet des actions sur chaque demande

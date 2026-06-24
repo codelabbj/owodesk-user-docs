@@ -6,30 +6,40 @@ title: Accueil
 
 # Bienvenue sur le centre d'aide OwoDesk
 
-OwoDesk est votre logiciel de gestion d'entreprise : ventes, stock, facturation, comptabilité, ressources humaines et bien plus encore.
+OwoDesk est votre logiciel de gestion d'entreprise tout-en-un : CRM, facturation, stock, comptabilite, RH, POS, e-commerce et bien plus encore.
 
-Cette documentation est conçue pour **les dirigeants, commerciaux, comptables et employés** qui utilisent OwoDesk au quotidien — sans jargon technique.
+Cette documentation vous guide pas a pas dans l'utilisation de chaque module.
 
-## Par où commencer ?
+## Par ou commencer ?
 
 | Situation | Commencez ici |
-|-----------|-----------------|
-| **Première connexion** | [Premiers pas](/category/premiers-pas) |
-| **Propriétaire — après l'onboarding** | [Premiers réglages](/premiers-pas/premiers-reglages) |
-| **Découvrir un module** | [Modules](/category/modules) |
+|-----------|---------------|
+| **Premiere connexion** | [Premiers pas](/category/premiers-pas) |
+| **Configurer mon entreprise** | [Premiers reglages](/premiers-pas/premiers-reglages) |
+| **Decouvrir un module** | Choisissez dans le menu ci-dessous |
 
-## Explorer par thème
+## Modules disponibles
 
-- **[Modules](/category/modules)** — CRM, facturation, stock, RH… avec parcours métier pas à pas
-- **[Administration](/category/administration)** — Équipe, rôles, abonnement
-- **[Conformité & fiscalité](/category/conformite-fiscalite)** — e-MECeF, OHADA, identifiants fiscaux
-- **[FAQ](/faq)** — Questions fréquentes
-- **[Téléchargements PDF](/telechargements)** — Guides à imprimer ou partager
+- **[Tableau de bord](/modules/tableau-de-bord)** -- Indicateurs cles de votre activite
+- **[CRM](/modules/crm)** -- Contacts, entreprises, pipeline de vente
+- **[Facturation](/modules/facturation)** -- Factures, devis, paiements, certification fiscale
+- **[Stock](/modules/stock)** -- Produits, entrepots, mouvements, inventaires
+- **[Ventes](/modules/ventes)** -- Devis, commandes, bons de livraison
+- **[Achats](/modules/achats)** -- Fournisseurs, commandes, receptions
+- **[Comptabilite](/modules/comptabilite)** -- Plan comptable, ecritures, tresorerie, rapports
+- **[Depenses](/modules/depenses)** -- Enregistrement et suivi des depenses
+- **[Ressources humaines](/modules/rh)** -- Employes, paie, conges, pointage
+- **[Point de vente](/modules/pos)** -- Ventes au comptoir, caisse, ticket Z
+- **[E-Commerce](/modules/ecommerce)** -- Boutique en ligne, commandes, livraison
+- **[Projets](/modules/projets)** -- Projets, taches, collaboration
+- **[Demandes internes](/modules/demandes-internes)** -- Decaissements, fournitures, RH
+- **[Assistant Owo](/modules/assistant-owo)** -- Assistant IA intelligent
 
-## Besoin d'aide rapide ?
+## Administration
 
-Dans l'application OwoDesk, ouvrez l'**assistant Owo** (bouton en bas à droite) pour poser vos questions en langage courant.
+- [Administration](/administration/) -- Equipe, roles, abonnement, parametres
+- [Conformite & fiscalite](/conformite-fiscalite/) -- e-MECeF, OHADA, identifiants fiscaux
 
-:::tip Contenu en cours de rédaction
-Les articles marqués « À compléter » sont des structures prêtes à être enrichies avec captures d'écran et procédures détaillées.
-:::
+## Besoin d'aide ?
+
+Dans l'application, ouvrez l'**assistant Owo** (icone en bas a droite) pour poser vos questions en langage courant.

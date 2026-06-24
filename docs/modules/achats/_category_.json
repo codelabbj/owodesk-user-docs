@@ -1,0 +1,5 @@
+{
+  "label": "Achats",
+  "link": { "type": "doc", "id": "modules/achats/index" },
+  "position": 6
+}

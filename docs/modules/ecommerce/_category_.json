@@ -1,5 +1,5 @@
 {
-  "label": "E-commerce & Marketplace",
+  "label": "E-Commerce",
   "link": { "type": "doc", "id": "modules/ecommerce/index" },
-  "position": 10
+  "position": 11
 }
