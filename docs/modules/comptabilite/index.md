@@ -1,13 +1,11 @@
 ---
-sidebar_position: 7
+sidebar_position: 1
 ---
 
 # Comptabilite
 
-Plan comptable SYSCOHADA, journaux, ecritures, tresorerie, balance et rapports financiers.
+Plan comptable SYSCOHADA, journaux, ecritures, tresorerie, revenus, depenses, dettes et rapports financiers.
 
-Ce module couvre l'integralite de la comptabilite : de la configuration du plan comptable a la consultation des etats financiers, en passant par la saisie des ecritures et le suivi des echeances.
-
-Les ecritures comptables sont generees automatiquement par les modules Ventes, Achats et Depenses.
+Ce module couvre l'integralite de la comptabilite : configuration du plan comptable, saisie des ecritures, suivi de la tresorerie, gestion des depenses et analyse financiere.
 
 Choisissez dans le menu **l'action a realiser**.

@@ -1,5 +1,5 @@
 {
   "label": "Point de vente (POS)",
   "link": { "type": "doc", "id": "modules/pos/index" },
-  "position": 10
+  "position": 7
 }

@@ -23,11 +23,8 @@ Cette documentation vous guide pas a pas dans l'utilisation de chaque module.
 - **[Tableau de bord](/modules/tableau-de-bord)** -- Indicateurs cles de votre activite
 - **[CRM](/modules/crm)** -- Contacts, entreprises, pipeline de vente
 - **[Facturation](/modules/facturation)** -- Factures, devis, paiements, certification fiscale
-- **[Stock](/modules/stock)** -- Produits, entrepots, mouvements, inventaires
-- **[Ventes](/modules/ventes)** -- Devis, commandes, bons de livraison
-- **[Achats](/modules/achats)** -- Fournisseurs, commandes, receptions
-- **[Comptabilite](/modules/comptabilite)** -- Plan comptable, ecritures, tresorerie, rapports
-- **[Depenses](/modules/depenses)** -- Enregistrement et suivi des depenses
+- **[Stock](/modules/stock)** -- Produits, entrepots, mouvements, inventaires, achats
+- **[Comptabilite](/modules/comptabilite)** -- Plan comptable, ecritures, tresorerie, revenus, depenses, rapports
 - **[Ressources humaines](/modules/rh)** -- Employes, paie, conges, pointage
 - **[Point de vente](/modules/pos)** -- Ventes au comptoir, caisse, ticket Z
 - **[E-Commerce](/modules/ecommerce)** -- Boutique en ligne, commandes, livraison

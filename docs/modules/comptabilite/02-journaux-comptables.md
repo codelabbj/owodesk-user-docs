@@ -5,34 +5,29 @@ sidebar_position: 2
 
 # Journaux comptables
 
-Les journaux comptables classent les ecritures par type d'operation. Chaque module envoie automatiquement ses ecritures dans le journal correspondant.
+Les journaux classent les ecritures par type d'operation.
 
 ## Journaux par defaut
 
 | Code | Journal | Utilisation |
 |---|---|---|
-| VTE | Journal des ventes | Factures clients |
-| ACH | Journal des achats | Commandes fournisseur |
-| BQ | Journal de banque | Operations bancaires |
-| CA | Journal de caisse | Operations en especes |
-| POS | Journal du point de vente | Ventes POS |
-| MOB | Journal mobile money | Operations mobile money |
-| OD | Journal des operations diverses | Virements, ecritures manuelles |
+| VTE | Ventes | Factures clients |
+| ACH | Achats | Commandes fournisseur |
+| BQ | Banque | Operations bancaires |
+| CA | Caisse | Operations en especes |
+| POS | Point de vente | Ventes POS |
+| MOB | Mobile money | Operations mobile money |
+| OD | Operations diverses | Virements, ecritures manuelles |
 
-## Creer un nouveau journal
+## Consulter les journaux
 
 1. Ouvrez **Comptabilite** -> **Journaux**.
-2. Cliquez **Nouveau journal**.
-3. Saisissez les informations :
-   - **Code** du journal (ex : "INV").
-   - **Nom** du journal (ex : "Journal des investissements").
-4. Cliquez **Enregistrer**.
+2. Les journaux sont affiches sous forme de cartes avec leur code et leur nombre d'ecritures.
 
-## Utilisation par module
+## Creer un journal
 
-Quand un module cree une ecriture comptable automatique, elle est dirigee vers le journal correspondant :
-- Une vente au POS genere une ecriture dans le journal **POS**.
-- Une facture client genere une ecriture dans le journal **VTE**.
-- Un paiement fournisseur genere une ecriture dans le journal **ACH**.
+1. Cliquez **Ajouter un journal**.
+2. Saisissez **Code** et **Nom**.
+3. Cliquez **Enregistrer**.
 
 <DocImage src="/img/guides/comptabilite/journaux-comptables.png" alt="Liste des journaux comptables" />

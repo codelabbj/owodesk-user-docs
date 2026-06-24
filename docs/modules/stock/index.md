@@ -17,3 +17,4 @@ Le module Stock gere vos produits, entrepots, niveaux de stock, mouvements et in
 - **Mouvements** — Entrees, sorties, transferts, ajustements, pertes
 - **Inventaire physique** — Sessions de comptage avec ecarts automatiques
 - **Regles de reapprovisionnement** — Seuils minimum et maximum avec alertes
+- **Achats** — Fournisseurs, commandes, reception et paiement fournisseur

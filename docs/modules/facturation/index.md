@@ -10,7 +10,7 @@ Le module Facturation gere l'ensemble de vos documents commerciaux : factures, d
 
 - **Clients** — Gestion des fiches clients avec IFU, coordonnees et adresse
 - **Factures** — Creation, finalisation simple ou normalisee, avoirs, factures export
-- **Devis** — Creation, envoi, acceptation et conversion en facture
+- **Factures Pro (devis)** — Creation de proformas, acceptation, impression
 - **Paiements** — Encaissements totaux, partiels, en attente, cloture automatique
 - **Certification e-MECeF** — Conformite fiscale avec QR code et signature electronique
 - **Signature** — Signature electronique sur les documents
