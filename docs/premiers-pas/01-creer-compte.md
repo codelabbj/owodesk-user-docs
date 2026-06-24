@@ -2,7 +2,7 @@
 
 ## Étapes
 
-1. Rendez-vous sur le site OwoDesk et cliquez sur **S'inscrire**.
+1. Rendez-vous sur [owo.bj](https://owo.bj) et cliquez sur **S'inscrire**.
 2. Renseignez votre nom, email et mot de passe.
 3. Validez votre adresse email via le lien reçu par courrier (voir ci-dessous).
 4. Connectez-vous — l'assistant de **première configuration** s'affiche automatiquement.

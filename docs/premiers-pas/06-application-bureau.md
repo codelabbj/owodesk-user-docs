@@ -14,7 +14,7 @@ OwoDesk est disponible en **application de bureau** (Windows, macOS, Linux) en p
 Ajouter le lien de téléchargement et les captures d'installation par système.
 :::
 
-1. Téléchargez l'installateur depuis le site OwoDesk.
+1. Téléchargez l'installateur depuis [owo.bj](https://owo.bj).
 2. Installez et ouvrez l'application.
 3. Connectez-vous avec les mêmes identifiants que sur le web.
 

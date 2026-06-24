@@ -98,8 +98,8 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://owodesk.com',
-          label: 'Site OwoDesk',
+          href: 'https://owo.bj',
+          label: 'owo.bj',
           position: 'right',
         },
       ],
@@ -124,7 +124,7 @@ const config: Config = {
         {
           title: 'Légal',
           items: [
-            {label: 'Site OwoDesk', href: 'https://owodesk.com'},
+            {label: 'owo.bj', href: 'https://owo.bj'},
           ],
         },
       ],
