@@ -27,6 +27,17 @@ const config: Config = {
 
   plugins: [
     [
+      '@cmfcmf/docusaurus-search-local',
+      {
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        language: 'fr',
+        style: undefined,
+        maxSearchResults: 10,
+      },
+    ],
+    [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
