@@ -1,5 +1,5 @@
 {
-  "label": "Demandes internes",
+  "label": "Demandes & approbations",
   "link": { "type": "doc", "id": "modules/demandes-internes/index" },
   "position": 10
 }

@@ -1,16 +1,29 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 ---
 
-# Projets et tâches
+# Projets
 
-Organisation du travail par projets, taches, commentaires et suivi analytique.
+Le module **Projets** (`/app/projects`) permet de gerer les taches en equipe sur un tableau Kanban.
 
-**Fonctionnalites principales :**
+Le module n'a pas d'onglets internes : l'ouverture depuis le menu lateral affiche directement le **tableau des taches** (`/app/projects/tasks`).
 
-- **Projets** : budget previsionnel, cout reel, suivi de marge, dates, manager
-- **Taches** : priorite, statut, echeance, assignation multiple, tags colores
-- **Commentaires** : mentions @collegue, notifications, lecture / non-lu
-- **Analytics** : budget vs cout reel, marge, total facture
+| Ecran dans l'app | Documentation |
+|------------------|---------------|
+| **Taches (Kanban)** | [Taches](/modules/projets/taches) |
 
-Choisissez dans le menu ce que vous voulez faire.
+## Parcours type
+
+1. [Creez un projet](/modules/projets/taches) via **Ajouter un projet**.
+2. Ajoutez des taches dans les colonnes **A faire**, **En cours**, **Termine**.
+3. Assignez des collaborateurs, commentez et suivez les echeances.
+4. Filtrez par projet, statut, etiquettes ou assigne.
+
+## Centre d'aide integre
+
+Le bouton **Centre d'aide** rappelle les concepts projets et taches (creation, assignation, echeances).
+
+## Limites actuelles de l'interface
+
+- Pas de catalogue projets separe dans le menu (creation rapide nom + description uniquement) ;
+- Pas d'onglet analytics budget / marge dans l'application.

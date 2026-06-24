@@ -20,11 +20,11 @@ Sur l'écran de connexion, cliquez sur **Mot de passe oublié** et suivez l'emai
 
 ### Comment créer une facture ?
 
-Voir [Créer une facture](/modules/facturation/creer-facture).
+Voir [Facture unientrepot](/modules/facturation/facture-unientrepot) ou [Facture multientrepot](/modules/facturation/facture-multientrepot).
 
 ### Comment certifier une facture au Bénin ?
 
-Voir [Configurer e-MECeF](/modules/facturation/certification-fiscale) puis [Finaliser une facture](/modules/facturation/finaliser-facture).
+Voir [Fiscal / e-facture](/modules/facturation/fiscal-efacture) puis [Factures](/modules/facturation/factures) (finalisation normalisee).
 
 ## Stock
 

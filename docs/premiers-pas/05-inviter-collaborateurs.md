@@ -5,83 +5,90 @@ sidebar_position: 5
 
 # Inviter des collaborateurs
 
-Invitez les membres de votre equipe a rejoindre votre espace OwoDesk. Chaque collaborateur recoit un email d'invitation et accede a l'application avec le role que vous avez defini.
+Invitez les membres de votre equipe a rejoindre votre espace OwoDesk. Chaque collaborateur recoit un email et accede a l'application avec le role que vous avez defini. Seul le **proprietaire** du compte peut gerer les invitations.
 
 ## Inviter un collaborateur
 
-1. Allez dans **Administration** > **Collaborateurs et roles**.
-2. Cliquez sur le bouton **Inviter un collaborateur**.
-3. Remplissez les informations :
-   - **Email** : adresse email du collaborateur (obligatoire).
-   - **Nom** : prenom et nom du collaborateur (facultatif, mais recommande).
-4. Choisissez le **role** du collaborateur dans la liste deroulante :
-   - **Commercial** : acces au CRM et aux ventes.
-   - **Comptable** : acces a la facturation, comptabilite et depenses.
-   - **Responsable RH** : acces a la paie, conges et fiches employes.
-   - **Manager** : lecture et ecriture sans suppression.
-   - **Collaborateur** : acces limite aux taches assignees.
-   - **Proprietaire** : acces total (reserve au createur du compte).
-5. Cliquez sur **Inviter**.
-6. Le collaborateur recoit un email avec un lien pour rejoindre votre organisation.
-7. Repetez l'operation pour chaque collaborateur a inviter.
+1. Ouvrez **Parametres** depuis le menu lateral (icone en bas de la barre de navigation).
+2. Cliquez sur l'onglet **Collaborateurs**.
+3. Cliquez sur **Inviter** (en haut a droite de la carte).
+4. Dans la fenetre **Inviter un collaborateur**, renseignez :
+   - **Email** (obligatoire).
+   - **Nom** (optionnel).
+   - **Role** (obligatoire) : selectionnez un role dans la liste. Le role **Proprietaire** n'est pas proposable a l'invitation.
+5. Cliquez sur **Envoyer l'invitation**.
+6. Le collaborateur recoit un email d'invitation. Repetez l'operation pour chaque membre a inviter.
 
 <DocImage src="/img/guides/premiers-pas/inviter-collaborateurs.png" alt="Invitation d'un collaborateur" />
 
-## Roles predfinis
+:::info Limite de sieges
+Si tous les sieges de votre plan sont utilises, le bouton **Inviter** n'apparait plus. Vous pouvez **ajouter des sieges** (plan Business) ou **passer au plan superieur** depuis la page **Abonnements**.
+:::
+
+## Roles predefinis
+
+Lors de l'invitation, vous choisissez parmi les roles de votre organisation :
 
 | Role | Description |
 |------|-------------|
-| **Proprietaire** | Acces total a tous les modules et parametres |
-| **Commercial** | Gestion des contacts, entreprises, opportunites et pipeline de vente |
-| **Comptable** | Facturation, comptabilite, tresorerie, depenses et rapports financiers |
-| **Responsable RH** | Fiches employes, paie, conges, pointage et demandes RH |
-| **Manager** | Lecture et ecriture dans les modules assignes, sans droit de suppression |
-| **Collaborateur** | Acces limite selon les permissions definies par module |
+| **Commercial** | Acces au CRM, projets, support et marketing (lecture) |
+| **Comptable** | Acces a la facturation, comptabilite, stock (lecture) et demandes |
+| **Responsable RH** | Acces aux ressources humaines et lecture facturation / support |
+| **Manager** | Lecture et ecriture sur les modules, sans suppression |
+| **Collaborateur** | Acces limite par defaut, avec ecriture sur les demandes internes |
+
+Le role **Proprietaire** est reserve au createur du compte et ne peut pas etre attribue par invitation.
 
 ## Creer un role personnalise
 
-1. Allez dans **Administration** > **Collaborateurs et roles**.
-2. Cliquez sur **Roles et permissions**.
-3. Cliquez sur **Creer un role**.
-4. Donnez un nom au role (ex. : "Magasinier", "Superviseur").
-5. Pour chaque module, definissez les droits :
-   - **Aucun acces** : le module est invisible.
-   - **Lecture** : consultation des donnees sans modification.
-   - **Ecriture** : creation et modification des donnees.
-   - **Suppression** : droit de supprimer des donnees.
+1. Ouvrez **Parametres** > **Roles & permissions**.
+2. Cliquez sur **Nouveau role**.
+3. Saisissez le **nom du role** (ex. : Magasinier, Superviseur).
+4. Optionnel : partez d'un **modele** predefini (Commercial, Comptable, etc.) pour pre-remplir les droits.
+5. Dans le tableau des permissions, cochez pour chaque module les droits souhaites : **Lecture**, **Ecriture**, **Suppression**.
 6. Cliquez sur **Enregistrer**.
-7. Le nouveau role est disponible dans la liste lors de l'invitation.
+7. Le nouveau role est disponible dans la liste lors d'une invitation.
 
-## Modifier le role d'un collaborateur
-
-1. Allez dans **Administration** > **Collaborateurs et roles**.
-2. Trouvez le collaborateur dans la liste.
-3. Cliquez sur l'icone de modification (crayon) a cote de son nom.
-4. Selectionnez le nouveau role dans la liste.
-5. Cliquez sur **Enregistrer**.
-6. Les modifications sont appliquees immediatement.
+Pour modifier un role existant, cliquez sur l'icone **crayon** a cote de son nom dans la liste des roles.
 
 ## Retirer un collaborateur
 
-1. Allez dans **Administration** > **Collaborateurs et roles**.
-2. Trouvez le collaborateur dans la liste.
-3. Cliquez sur l'icone de suppression (corbeille).
-4. Confirmez la suppression.
-5. Le collaborateur n'a plus acces a votre organisation.
+1. Ouvrez **Parametres** > **Collaborateurs**.
+2. Dans la liste des collaborateurs actifs, cliquez sur l'icone **corbeille** a cote du collaborateur concerne (non disponible pour le proprietaire ni pour vous-meme).
+3. Confirmez dans la fenetre **Retirer le collaborateur**.
+4. Le collaborateur n'a plus acces a votre organisation.
 
 ## Invitations en attente
 
-1. Allez dans **Administration** > **Collaborateurs et roles**.
-2. L'onglet **Invitations en attente** affiche la liste des personnes invitees mais n'ayant pas encore accepte.
-3. Vous pouvez **annuler** une invitation si l'email est incorrect.
-4. Vous pouvez **renvoyer** l'email d'invitation si le collaborateur ne l'a pas recu.
+Toujours dans **Parametres** > **Collaborateurs**, la section **Invitations envoyees en attente** liste les personnes invitees qui n'ont pas encore repondu.
+
+Pour chaque invitation en attente, vous pouvez :
+- voir l'email, le role attribue et la date d'envoi ;
+- cliquer sur **Annuler** pour retirer l'invitation.
 
 ## Accepter une invitation (pour le collaborateur)
 
-1. Ouvrez l'email d'invitation recu d'OwoDesk.
-2. Cliquez sur le lien **Accepter l'invitation**.
-3. Si vous avez deja un compte OwoDesk, connectez-vous. Sinon, creez un compte avec la meme adresse email.
-4. L'organisation apparait dans votre liste d'entreprises.
-5. Vous accedez aux modules et donnees selon votre role.
+Le parcours depend de la situation du collaborateur invite.
+
+### Nouveau sur OwoDesk (pas encore de compte)
+
+1. Ouvrez l'email d'invitation et cliquez sur le lien recu (valable 24 heures).
+2. Sur la page **Definir le mot de passe**, completez vos informations et choisissez un mot de passe.
+3. Connectez-vous sur [owo.bj](https://owo.bj) avec votre email.
+4. La page **Invitations en attente** s'affiche : cliquez sur **Accepter** pour rejoindre l'organisation (ou **Rejeter** pour decliner).
+5. Si votre profil n'est pas encore complete, l'assistant d'onboarding vous guide avant l'acces au tableau de bord.
+
+### Deja un compte OwoDesk
+
+1. Connectez-vous avec l'adresse email utilisee pour l'invitation.
+2. Vous etes redirige vers **Invitations en attente** si une invitation est en cours.
+3. Cliquez sur **Accepter** pour rejoindre l'organisation, ou **Rejeter** pour la refuser.
+4. L'organisation apparait dans votre selecteur d'entreprises. Vous accedez aux modules selon votre role.
 
 <DocImage src="/img/guides/premiers-pas/accepter-invitation.png" alt="Acceptation d'une invitation" />
+
+## Bon a savoir
+
+- Vous pouvez aussi inviter des collaborateurs pendant l'**onboarding** (etape Collaborateurs), avant d'acceder au tableau de bord.
+- Les collaborateurs deja membres de l'organisation ne peuvent pas etre invites a nouveau avec le meme email.
+- Pour gerer les membres et invitations apres l'onboarding, utilisez toujours **Parametres** > **Collaborateurs**.

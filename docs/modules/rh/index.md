@@ -1,21 +1,30 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # Ressources humaines
 
-Gerer les employes, les departements, les presences, les conges, la paie et les documents RH.
+Le module **RH** (`/app/hr`) gere vos employes, la paie, la presence, les conges et les documents.
 
-**Fonctionnalites principales :**
+Ouvrez-le depuis le menu lateral **RH**. Le sous-menu reprend les onglets de l'application :
 
-- **Departements** : creer et organiser la structure de l'entreprise
-- **Employes** : creer, inviter et consulter les fiches employes
-- **Pointage et presence** : clock-in / clock-out avec GPS, suivi des retards, statistiques globales
-- **Conges et permissions** : demandes, approbation, suivi des soldes
-- **Paie** :周期 de paie, generation des fiches, paiement individuel ou en masse
-- **Documents employes** : contrats, CNSS, pieces d'identite, RIB
-- **Demandes de documents** : certificats de travail, attestations de stage
-- **Configuration paie** : taux CNSS, barème ITS, ORTB, prestations familiales
-- **Jours feries** : gestion des jours chomes et impact sur le calcul des conges
+| Onglet dans l'app | Documentation |
+|-------------------|---------------|
+| **Employes** | [Employes](/modules/rh/employes) |
+| **Gestion de la paie** | [Gestion de la paie](/modules/rh/paie) |
+| **Gestion de la presence** | [Gestion de la presence](/modules/rh/presence) |
+| **Horaires** | [Horaires](/modules/rh/horaires) |
+| **Conges/Permissions** | [Conges et permissions](/modules/rh/conges-permissions) |
+| **Demandes de pieces** | [Demandes de pieces](/modules/rh/demandes-pieces) |
+| **Documents** | [Documents](/modules/rh/documents) |
 
-Choisissez dans le menu l'action a realiser.
+## Parcours type
+
+1. Creez vos [employes](/modules/rh/employes) et configurez les [horaires](/modules/rh/horaires).
+2. Suivez la [presence](/modules/rh/presence) et traitez les [conges](/modules/rh/conges-permissions).
+3. Generez et payez les salaires via la [gestion de la paie](/modules/rh/paie).
+4. Centralisez les [documents](/modules/rh/documents) et les [demandes de pieces](/modules/rh/demandes-pieces).
+
+## Centre d'aide integre
+
+Le bouton **Centre d'aide** en haut du module rappelle le role de chaque section.

@@ -15,27 +15,26 @@ Cette documentation vous guide pas a pas dans l'utilisation de chaque module.
 | Situation | Commencez ici |
 |-----------|---------------|
 | **Premiere connexion** | [Premiers pas](/category/premiers-pas) |
-| **Configurer mon entreprise** | [Premiers reglages](/premiers-pas/premiers-reglages) |
+| **Configurer mon entreprise** | [Configurer son entreprise](/premiers-pas/configurer-entreprise) |
 | **Decouvrir un module** | Choisissez dans le menu ci-dessous |
 
 ## Modules disponibles
 
 - **[Tableau de bord](/modules/tableau-de-bord)** -- Indicateurs cles de votre activite
-- **[CRM](/modules/crm)** -- Contacts, entreprises, pipeline de vente
+- **[CRM](/modules/crm)** -- Contacts, entreprises, pipeline, vue 360
 - **[Facturation](/modules/facturation)** -- Factures, devis, paiements, certification fiscale
 - **[Stock](/modules/stock)** -- Produits, entrepots, mouvements, inventaires, achats
-- **[Comptabilite](/modules/comptabilite)** -- Plan comptable, ecritures, tresorerie, revenus, depenses, rapports
-- **[Ressources humaines](/modules/rh)** -- Employes, paie, conges, pointage
+- **[Comptabilite](/modules/comptabilite)** -- Tresorerie, revenus, depenses, dettes, rapports
+- **[Ressources humaines](/modules/rh)** -- Employes, paie, presence, conges, documents
 - **[Point de vente](/modules/pos)** -- Ventes au comptoir, caisse, ticket Z
-- **[E-Commerce](/modules/ecommerce)** -- Boutique en ligne, commandes, livraison
-- **[Projets](/modules/projets)** -- Projets, taches, collaboration
-- **[Demandes internes](/modules/demandes-internes)** -- Decaissements, fournitures, RH
+- **[E-Commerce](/modules/ecommerce)** -- Marketplace, produits, commandes initiees
+- **[Projets](/modules/projets)** -- Taches Kanban, collaboration
+- **[Demandes & approbations](/modules/demandes-internes)** -- Decaissements, fournitures, RH, circuit de validation
 - **[Assistant Owo](/modules/assistant-owo)** -- Assistant IA intelligent
 
 ## Administration
 
 - [Administration](/administration/) -- Equipe, roles, abonnement, parametres
-- [Conformite & fiscalite](/conformite-fiscalite/) -- e-MECeF, OHADA, identifiants fiscaux
 
 ## Besoin d'aide ?
 

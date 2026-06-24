@@ -1,17 +1,32 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 ---
 
-# Point de vente (POS)
+# Point de vente
 
-Caisse en magasin : sessions, ventes, encaissement et rapports.
+Le module **Point de vente** (`/app/pos`) permet d'encaisser des ventes au comptoir, de gerer les sessions de caisse et les tickets.
 
-**Fonctionnalites principales :**
+Ouvrez-le depuis le menu lateral **Point de vente**. Le sous-menu reprend les onglets de l'application :
 
-- **Sessions de caisse** : ouverture et fermeture, fonds de caisse, controle des ecarts
-- **Ventes** : creation, ajout d'articles, paliers de prix, TVA par produit
-- **Encaissement** : especes, carte, mobile money avec deduction automatique du stock
-- **Annulation de vente** : motif obligatoire, restauration du stock, audit trail
-- **Rapport Z** : total des ventes, ventilation par mode, top 10 produits, annulations
+| Onglet dans l'app | Documentation |
+|-------------------|---------------|
+| **Encaissement** | [Encaissement](/modules/pos/encaissement) |
+| **Sessions de caisse** | [Sessions de caisse](/modules/pos/sessions-caisse) |
+| **Annulations** | [Annulations](/modules/pos/annulations) |
+| **Impression & Scan** | [Impression & scan](/modules/pos/impression-scan) |
 
-Choisissez dans le menu ce que vous voulez faire.
+## Parcours type
+
+1. Ouvrez une [session de caisse](/modules/pos/sessions-caisse).
+2. Encaissez les ventes sur l'onglet [Encaissement](/modules/pos/encaissement).
+3. En cas d'erreur, annulez via [Annulations](/modules/pos/annulations).
+4. A la fin de journee, cloturez la session et consultez le **Z de caisse**.
+5. Reimprimez un ticket depuis [Impression & scan](/modules/pos/impression-scan) si besoin.
+
+## Centre d'aide integre
+
+Le bouton **Centre d'aide** en haut du module rappelle le role de chaque section.
+
+## Prerequis
+
+Les entrepots utilises en caisse doivent avoir l'option **Autoriser les ventes** activee (voir [Entrepots](/modules/stock/entrepots)).

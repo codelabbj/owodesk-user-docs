@@ -2,19 +2,29 @@
 sidebar_position: 1
 ---
 
-# Stock inventaire
+# Stock
 
-Le module Stock gere vos produits, entrepots, niveaux de stock, mouvements et inventaires physiques.
+Le module **Stock** (`/app/inventory`) gere vos produits, entrepots, quantites et mouvements de stock.
 
-## Fonctionnalites
+Ouvrez-le depuis le menu lateral **Stock**. Le sous-menu reprend les onglets de l'application :
 
-- **Categories de produits** — Organisation hierarchique des articles
-- **Produits** — Fiches completes avec SKU, prix, taxes, paliers de prix
-- **Variantes** — Tailles, couleurs et autres declinaisons avec prix specifiques
-- **Taxes** — Gestion des groupes de taxes (TVA, AIB, specifiques)
-- **Entrepots** — Multi-sites avec coordonnees GPS et parametres de vente
-- **Niveaux de stock** — Suivi des quantites par produit et entrepot
-- **Mouvements** — Entrees, sorties, transferts, ajustements, pertes
-- **Inventaire physique** — Sessions de comptage avec ecarts automatiques
-- **Regles de reapprovisionnement** — Seuils minimum et maximum avec alertes
-- **Achats** — Fournisseurs, commandes, reception et paiement fournisseur
+| Onglet dans l'app | Documentation |
+|-------------------|---------------|
+| **Accueil** | [Accueil](/modules/stock/accueil) |
+| **Produits** | [Produits](/modules/stock/produits) |
+| **Entrepots** | [Entrepots](/modules/stock/entrepots) |
+| **Niveaux de stock** | [Niveaux de stock](/modules/stock/niveaux-stock) |
+| **Transferts** | [Transferts](/modules/stock/transferts) |
+| **Mouvements** | [Mouvements](/modules/stock/mouvements) |
+| **Achats** | [Achats](/modules/stock/achats) |
+
+## Parcours type
+
+1. Creez vos [produits](/modules/stock/produits) et vos [entrepots](/modules/stock/entrepots).
+2. Definissez les [niveaux de stock](/modules/stock/niveaux-stock) (quantites et seuils d'alerte).
+3. Enregistrez les [mouvements](/modules/stock/mouvements) ou les [transferts](/modules/stock/transferts) entre entrepots.
+4. Reapprovisionnez via les [achats](/modules/stock/achats) fournisseurs.
+
+## Centre d'aide integre
+
+Le bouton **Centre d'aide** en haut du module rappelle le role de chaque section.

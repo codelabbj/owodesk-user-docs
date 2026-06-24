@@ -1,23 +1,30 @@
 ---
-sidebar_label: Demandes internes
 sidebar_position: 1
 ---
 
-# Demandes internes
+# Demandes & approbations
 
-Le module Demandes internes permet de creer et de gerer des demandes de toute nature au sein de l'organisation : decaissements, fournitures, ressources humaines ou demandes libres.
+Le module **Demandes & approbations** (`/app/requests`) centralise les demandes internes et leur circuit de validation entre collaborateurs.
+
+Ouvrez-le depuis le menu lateral **Demandes & approbations**. Le sous-menu reprend les onglets de l'application :
+
+| Onglet dans l'app | Documentation |
+|-------------------|---------------|
+| **Boite de reception** | [Boite de reception](/modules/demandes-internes/boite-reception) |
+| **Nouvelle demande** | [Nouvelle demande](/modules/demandes-internes/nouvelle-demande) |
 
 ## Types de demandes
 
-- **Decaissement** -- Demande de sortie de fonds avec montant, motif et mode de paiement
-- **Fourniture** -- Demande d'achat de materiel ou de fournitures avec liste d'articles
-- **RH** -- Demande liee aux ressources humaines (absence, formation, etc.)
-- **Autre** -- Demande libre sans format impose
+| Type | Usage |
+|------|-------|
+| **Decaissement** | Sortie de fonds (montant, mode de paiement, justificatifs) |
+| **Fourniture** | Liste d'articles a commander |
+| **RH** | Conge ou permission avec dates |
+| **Autre** | Demande libre (titre + description) |
 
-## Fonctionnalites
+## Parcours type
 
-- Creation de demande avec pieces jointes
-- Assignation d'un destinataire pour traitement
-- Circuit de validation avec transfert possible
-- Rejet motive ou cloture avec creation automatique de depense
-- Historique complet des actions sur chaque demande
+1. Creez une [nouvelle demande](/modules/demandes-internes/nouvelle-demande) et assignez un premier destinataire.
+2. Le destinataire la traite depuis la [boite de reception](/modules/demandes-internes/boite-reception).
+3. Il peut **cloturer**, **transferer** a un autre collaborateur ou **refuser** avec motif.
+4. Pour un decaissement cloture, une depense est creee en comptabilite.

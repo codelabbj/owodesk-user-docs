@@ -11,7 +11,6 @@ user-docs/
 │   ├── premiers-pas/              # 🚀 8 articles
 │   ├── modules/                   # 📦 modules → une page par action
 │   ├── administration/            # ⚙️ 4 articles
-│   ├── conformite-fiscalite/      # 🇧🇯 3 articles
 │   ├── faq/                       # ❓ FAQ
 │   └── telechargements/           # 📥 PDF
 ├── docusaurus.config.ts
