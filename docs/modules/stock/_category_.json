@@ -1,0 +1,5 @@
+{
+  "label": "Stock & inventaire",
+  "link": { "type": "doc", "id": "modules/stock/index" },
+  "position": 4
+}

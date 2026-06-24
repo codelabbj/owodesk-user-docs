@@ -1,0 +1,139 @@
+{
+  "viewport": { "width": 1440, "height": 900 },
+  "shots": [
+    {
+      "file": "stock/produit-creation.png",
+      "path": "/app/inventory/products",
+      "waitFor": "main"
+    },
+    {
+      "file": "stock/entrepot-creation.png",
+      "path": "/app/inventory/warehouses",
+      "waitFor": "main"
+    },
+    {
+      "file": "stock/niveaux-stock.png",
+      "path": "/app/inventory/stock",
+      "waitFor": "main"
+    },
+    {
+      "file": "stock/mouvement-stock.png",
+      "path": "/app/inventory/movements",
+      "waitFor": "main"
+    },
+    {
+      "file": "stock/inventaire-physique.png",
+      "path": "/app/inventory/physical",
+      "waitFor": "main"
+    },
+    {
+      "file": "pos/session-ouverture.png",
+      "path": "/app/pos/sessions",
+      "waitFor": "main"
+    },
+    {
+      "file": "pos/caisse-encaissement.png",
+      "path": "/app/pos/checkout",
+      "waitFor": "main"
+    },
+    {
+      "file": "pos/session-fermeture.png",
+      "path": "/app/pos/sessions",
+      "waitFor": "main"
+    },
+    {
+      "file": "rh/pointages-mois.png",
+      "path": "/app/hr/attendance",
+      "waitFor": "main"
+    },
+    {
+      "file": "rh/periode-paie.png",
+      "path": "/app/hr/payroll",
+      "waitFor": "main"
+    },
+    {
+      "file": "rh/bulletin-paie.png",
+      "path": "/app/hr/payslips",
+      "waitFor": "main"
+    },
+    {
+      "file": "rh/demande-conge.png",
+      "path": "/app/hr/leave",
+      "waitFor": "main"
+    },
+    {
+      "file": "demandes/demande-decaissement-creation.png",
+      "path": "/app/requests/create",
+      "waitFor": "main"
+    },
+    {
+      "file": "demandes/demande-decaissement-validation.png",
+      "path": "/app/requests",
+      "waitFor": "main"
+    },
+    {
+      "file": "ecommerce/boutique-parametres.png",
+      "path": "/app/ecommerce/settings",
+      "waitFor": "main"
+    },
+    {
+      "file": "ecommerce/produits-publies.png",
+      "path": "/app/ecommerce/products",
+      "waitFor": "main"
+    },
+    {
+      "file": "ecommerce/intents-contact-whatsapp.png",
+      "path": "/app/ecommerce/intents",
+      "waitFor": "main"
+    },
+    {
+      "file": "comptabilite/tresorerie.png",
+      "path": "/app/accounting/treasury",
+      "waitFor": "main"
+    },
+    {
+      "file": "comptabilite/depenses.png",
+      "path": "/app/accounting/expenses",
+      "waitFor": "main"
+    },
+    {
+      "file": "tableau-de-bord/vue-ensemble.png",
+      "path": "/app/dashboard",
+      "waitFor": "main"
+    }
+  ],
+  "manualOnly": [
+    {
+      "file": "boite-outils/pointage.png",
+      "reason": "Boîte à outils — documentation à reprendre plus tard"
+    },
+    {
+      "file": "premiers-pas/*.png",
+      "reason": "Parcours onboarding — capture manuelle"
+    },
+    {
+      "file": "fiscal/config-mecef-*.png",
+      "reason": "Configuration MECeF — capture manuelle"
+    },
+    {
+      "file": "facturation/facture-brouillon.png",
+      "reason": "Nécessite une facture existante (GET /api/billing/invoices/)"
+    },
+    {
+      "file": "facturation/facture-finaliser-normalisee.png",
+      "reason": "Nécessite une facture brouillon ouverte"
+    },
+    {
+      "file": "facturation/facture-pdf-normalisee.png",
+      "reason": "PDF facture certifiée avec QR code"
+    },
+    {
+      "file": "rh/fiche-employe.png",
+      "reason": "Nécessite un employé existant (GET /api/hr/employees/)"
+    },
+    {
+      "file": "fiscal/ticket-pos-normalise.png",
+      "reason": "Ticket POS après encaissement certifié"
+    }
+  ]
+}

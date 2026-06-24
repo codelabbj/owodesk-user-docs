@@ -1,0 +1,44 @@
+/**
+ * OwoDesk — documentation client
+ * Couleurs alignées sur les tokens de l'application (Deep Orange)
+ */
+
+:root {
+  --ifm-color-primary: #E8450A;
+  --ifm-color-primary-dark: #C43508;
+  --ifm-color-primary-darker: #9E2806;
+  --ifm-color-primary-darkest: #771D04;
+  --ifm-color-primary-light: #F96130;
+  --ifm-color-primary-lighter: #FF8A5C;
+  --ifm-color-primary-lightest: #FFD9C8;
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-code-font-size: 95%;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #FF8A5C;
+  --ifm-color-primary-dark: #F96130;
+  --ifm-color-primary-darker: #E8450A;
+  --ifm-color-primary-darkest: #C43508;
+  --ifm-color-primary-light: #FFB599;
+  --ifm-color-primary-lighter: #FFD9C8;
+  --ifm-color-primary-lightest: #FFF3EE;
+}
+
+.navbar__logo img {
+  height: 2rem;
+}
+
+.doc-image {
+  margin: 1.25rem 0;
+}
+
+.doc-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
