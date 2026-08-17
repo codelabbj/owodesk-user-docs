@@ -1,83 +1,53 @@
 ---
 sidebar_label: Niveaux de stock
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Niveaux de stock
 
-Onglet **Niveaux de stock** (`/app/inventory/stock`). Suivi des quantites par produit, variante et entrepot.
+Onglet **Niveaux de stock** (`/app/inventory/stock`). Titre : **Stock par entrepôt**.
 
-Deux sous-onglets sur cette page :
+Deux sous-onglets : **Lignes de stocks** et **Inventaire physique**.
 
-| Sous-onglet | Role |
-|-------------|------|
-| **Lignes de stocks** | Quantites, seuils d'alerte, valeur |
-| **Inventaire physique** | Comptage terrain et ecarts |
+---
 
-## Sous-onglet Lignes de stocks
+## Lignes de stocks
 
 ### Indicateurs
 
 | Indicateur | Signification |
 |------------|---------------|
-| **Valeur (selection)** | Valeur de vente des lignes filtrees |
-| **Articles (selection)** | Quantite totale filtree |
-| **Rupture de stock** | Lignes a quantite zero |
-| **Stock faible** | Quantite inferieure ou egale au seuil d'alerte |
+| **Valeur (sélection)** | Valorisation de la sélection |
+| **Articles (sélection)** | Nombre d’articles |
+| **Rupture de stock** | Quantité 0 |
+| **Stock faible** | Sous seuil |
 
-### Alertes de reapprovisionnement
+### Alertes de réapprovisionnement
 
-Si des regles de reappro existent et que le stock est sous le minimum, une section **Alertes de reapprovisionnement** affiche pour chaque alerte :
+Si des règles existent : stock actuel et suggestion **Commander :** quantité.
 
-- produit et entrepot ;
-- **Stock actuel** ;
-- **Commander** : quantite suggeree.
+:::info Règles
+La gestion détaillée des règles de réappro peut exister en URL dédiée, mais **n’est pas** un onglet de la navigation actuelle.
+:::
 
-### Recherche et filtres
+### Ajouter une ligne
 
-- Recherche par SKU, nom produit, variante ou entrepot.
-- Filtre par **entrepot**.
-- Boutons **PDF** : export etat de stock (tous les entrepots ou entrepot filtre).
+**Ajouter la ligne de stock** : Produit, Variante, Entrepôt, Quantité, **Seuil d’alerte**.
 
-### Ajouter ou modifier une ligne
+Exports : **PDF — tous les entrepôts** / **PDF — cet entrepôt**.
 
-Bouton **Ajouter la ligne de stock** :
-
-| Champ | Description |
-|-------|-------------|
-| **Produit** | Recherche dans le catalogue |
-| **Variante** | Si le produit a des variantes |
-| **Entrepot** | Lieu de stockage |
-| **Quantite** | Stock actuel |
-| **Seuil d'alerte** | Alerte stock faible sur l'accueil |
-
-En modification, seuls la quantite et le seuil sont editables.
-
-### Tableau
-
-Colonnes : Produit, Variante, Entrepot, Quantite, Valeur vente, Seuil d'alerte, Actions (modifier / supprimer).
-
-Ligne de **Total** en pied de tableau.
+Colonnes : Produit, Variante, Entrepôt, Quantité, **Valeur (vente)**, Seuil, Total.
 
 ---
 
-## Sous-onglet Inventaire physique
+## Inventaire physique
 
-### Liste des inventaires
+Sous-onglet dans cette page (pas un onglet module séparé).
 
-Tableau : **Date**, **Entrepot**, **Lignes**, **Statut** (Brouillon ou Valide).
+- **Nouvel inventaire** : date, entrepôt ;
+- Colonnes **Théorique** / **Compté** / **Écart** ;
+- Statuts **Brouillon** / **Validé** ;
+- Actions **Valider** / **Annuler** ;
+- Un brouillon par entrepôt en général.
 
-### Nouvel inventaire
-
-Bouton **Nouvel inventaire** :
-
-1. Choisissez l'**entrepot** et la **date**.
-2. Les produits en stock dans cet entrepot s'affichent avec :
-   - **Quantite theorique** (systeme) ;
-   - **Quantite comptee** (saisie terrain) ;
-   - **Ecart** (+ / −).
-3. Renseignez toutes les quantites comptees.
-4. **Valider l'inventaire** : ajuste le stock selon les ecarts.
-5. **Annuler** : abandonne le brouillon.
-
-Un seul inventaire brouillon par entrepot a la fois.
+La validation ajuste le stock et génère des mouvements associés.

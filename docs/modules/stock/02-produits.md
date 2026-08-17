@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Produits
 
-Onglet **Produits** (`/app/inventory/products`). Catalogue articles : SKU, prix, categories, variantes et codes-barres.
+Onglet **Produits** (`/app/inventory/products`). Catalogue : SKU, prix, catégories, variantes, codes-barres.
 
 ## Indicateurs
 
@@ -13,54 +13,43 @@ Onglet **Produits** (`/app/inventory/products`). Catalogue articles : SKU, prix,
 |------------|---------------|
 | **Catalogue produits** | Nombre de produits |
 | **SKUs** | Produits + variantes |
-| **Stock faible** | Produits sous seuil d'alerte |
+| **Stock faible** | Sous seuil d’alerte |
 
 ## Recherche et filtres
 
-- Champ de **recherche** (nom, SKU, code-barres).
-- Filtre de statut : **Actifs**, **Archives**, **Tous**.
+- Recherche (nom, SKU, code-barres) ;
+- Statut : **Actifs** / **Archivés** / **Tous** ;
+- **Toutes les catégories** (filtre).
 
 ## Ajouter ou modifier un produit
 
-Bouton **Ajouter le produit**. Formulaire principal :
+Bouton **Ajouter le produit** :
 
 | Champ | Description |
 |-------|-------------|
-| **Nom** | Libelle du produit (SKU auto-genere si non modifie) |
-| **SKU** | Reference unique (non modifiable apres creation) |
-| **Prix de vente** | Prix de vente |
-| **Prix d'achat** | Cout d'achat (reprend le prix de vente si vide) |
-| **Groupe de taxe** | A a F (ex. B = 18 %, A = exonere) |
-| **Categorie** | Combobox avec categories existantes ou nouvelle |
-| **Unite** | u, pcs, kg, L, carton, etc. |
-| **Code-barres** | EAN, QR… Bouton **Scanner** pour douchette |
-| **Actif** | Decochez pour archiver le produit |
+| **Nom** | Libellé |
+| **SKU** | Auto ; **non modifiable** après création |
+| **Prix de vente** / **Prix d’achat** | |
+| **Catégorie** | Voir [Catégories](/modules/stock/categories) |
+| **Unité** | u, Pièce, kg, g, L, ml, Carton, Paquet, Boîte, Sac, Tonne… |
+| **Groupe de taxe** | A–F (ex. A exonéré, B 18 %) |
+| **Fiscalité avancée — régime** | Standard / Taxe de séjour / Taxe spécifique |
+| **Code-barres** + **Scanner** | |
+| **Actif** | Décocher pour archiver |
+| **Produit vendable** | Si décoché : hors caisse / factures |
 
-### Options avancees
+### Options avancées
 
-Section repliable : **description**, **URL image**, **poids**, **dimensions** (L × l × H).
+Description, URL image, poids, dimensions (L × l × H).
 
 ### Variantes
 
-Pour un produit avec tailles, couleurs, etc. :
+**Ajouter une variante** : nom, SKU, code-barres, images (max 20), **paliers de prix**, **variante de base**.
 
-1. Enregistrez d'abord le produit.
-2. Section **Variantes** : **Ajouter une variante**.
-3. Renseignez SKU, nom, attributs (ex. Taille : L), prix vente/achat.
-4. Palier de prix optionnel par variante.
+À la création : stock initial possible **par entrepôt**.
 
-Chaque variante a son propre SKU et peut avoir un stock distinct.
+Après création, l’app peut proposer : *Ajouter ce produit au stock d’un entrepôt ?* → **Ajouter au stock** / **Plus tard**.
 
-## Liste des produits
+## Liste
 
-Pour chaque ligne : image, nom, SKU, categorie, prix, badge statut. Actions :
-
-| Action | Effet |
-|--------|-------|
-| **Crayon** | Modifier le produit |
-| **Code-barres** | Ouvrir la fenetre code-barres / etiquette |
-| **Corbeille** | Supprimer (si aucune reference bloquante) |
-
-## Code-barres
-
-Le bouton code-barres ouvre une modale pour visualiser ou gerer le code-barres du produit.
+Actions : modifier, code-barres (impression / téléchargement tailles Petite/Moyenne/Grande), supprimer.

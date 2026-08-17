@@ -1,43 +1,36 @@
 ---
-sidebar_label: Entrepots
-sidebar_position: 4
+sidebar_label: Entrepôts
+sidebar_position: 5
 ---
 
-# Entrepots
+# Entrepôts
 
-Onglet **Entrepots** (`/app/inventory/warehouses`). Lieux de stockage physiques ou logiques.
+Onglet **Entrepôts** (`/app/inventory/warehouses`). Dépôts, points de vente et sites de stockage.
 
-## Actions en-tete
+## Actions
 
-| Bouton | Effet |
-|--------|-------|
-| **PDF — tous les entrepots** | Export PDF de l'etat global du stock |
-| **Ajouter l'entrepot** | Ouvre le formulaire de creation |
+- **PDF — tous les entrepôts**
+- **Ajouter l’entrepôt** (création / édition : souvent réservée au **propriétaire**)
 
-## Creer ou modifier un entrepot
+## Filtres
+
+**Tous** · **Dépôts centraux** · **Points de vente** · **Mixtes**
+
+## Formulaire
 
 | Champ | Description |
 |-------|-------------|
-| **Nom** | Ex. Magasin central, Depot Abidjan |
-| **Adresse** | Adresse + **position sur la carte** (clic ou marqueur) |
-| **Autoriser les ventes** | Si coche : utilisable en caisse et facturation. Sinon : stockage seul |
-| **Depot central** | Hub logistique pouvant reapprovisionner les autres entrepots via transfert |
+| **Nom** | Obligatoire |
+| **Adresse** + carte | Position GPS |
+| **Autoriser les ventes (caisse et factures)** | Sinon : site de stockage sans vente |
+| **Dépôt central (réapprovisionne les autres entrepôts)** | Marque le dépôt comme central |
 
-La position GPS sert au routage marketplace (entrepot le plus proche).
+:::info Lien RH
+La création / mise à jour d’un entrepôt peut créer ou mettre à jour un **lieu de pointage** RH associé.
+:::
 
-## Carte entrepot
+## Carte entrepôt
 
-Chaque entrepot affiche :
+Badges typiques : **Central**, **Point de vente**, **Pas de vente**, **Site de stockage**.
 
-- nom, adresse ;
-- badges **Central** / **Pas de vente** si applicable ;
-- nombre de **produits en stock** (> 0) ;
-- indicateur carte : position definie ou a completer.
-
-Actions sur la carte :
-
-| Action | Effet |
-|--------|-------|
-| **Crayon** | Modifier |
-| **PDF** | Etat du stock de cet entrepot |
-| **Corbeille** | Supprimer l'entrepot |
+Indicateurs : **Position définie** / **Carte à compléter**, **Lieu de pointage lié**, export **État PDF**, suppression.

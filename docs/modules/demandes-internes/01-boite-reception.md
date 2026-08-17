@@ -1,82 +1,40 @@
 ---
-sidebar_label: Boite de reception
+sidebar_label: Boîte de réception
 sidebar_position: 2
 ---
 
-# Boite de reception
+# Boîte de réception
 
-Onglet **Boite de reception** (`/app/requests`). Liste de toutes les demandes qui vous concernent.
+Onglet **Boîte de réception** (`/app/requests`). Page par défaut du module.
 
-## Acceder a la page
+Hint : *Toutes vos demandes en un seul endroit — les badges indiquent si vous devez agir ou si vous êtes le demandeur.*
 
-Menu lateral **Demandes & approbations** > onglet **Boite de reception** (page par defaut du module).
+## Accès
 
-Un compteur affiche le nombre de demandes **a traiter** (vous etes detenteur et statut en cours).
+Menu **Demandes & approbations** → **Boîte de réception**.
 
-Bouton **Nouvelle demande** : raccourci vers [Nouvelle demande](/modules/demandes-internes/nouvelle-demande).
+Badge numérique = demandes **à traiter**. Bouton **Nouvelle demande**.
 
 ## Filtres
 
 | Filtre | Options |
 |--------|---------|
-| **Perimetre** | Tout ce qui me concerne, A traiter uniquement, Mes envois uniquement ; administrateurs : Reste de l'organisation |
-| **Type** | Decaissement, Fourniture, RH, Autre |
-| **Statut** | En cours, Refusee, Cloturee |
+| **Périmètre** | **Tout ce qui me concerne**, **À traiter uniquement**, **Mes envois uniquement** ; admins : **Reste de l'organisation** |
+| **Type** | Tous / Décaissement / Fourniture / RH / Autre |
+| **Statut** | Tous / **En cours** / **Refusée** / **Clôturée** |
 
-Les demandes a traiter en priorite apparaissent en tete de liste.
+Les demandes **à traiter** apparaissent en priorité.
 
 ## Tableau
 
 | Colonne | Contenu |
 |---------|---------|
-| **Reference** | Lien vers le detail |
-| **Titre** | Objet de la demande |
-| **Mon lien** | Badges A traiter, Mon envoi, Autre (admins) |
-| **Type** | Decaissement, Fourniture, RH, Autre |
-| **Statut** | En cours, Refusee, Cloturee |
-| **Detenteur** | Collaborateur charge de traiter |
-| **Date et heure** | Date de creation |
+| **Référence** | Lien vers le détail |
+| **Titre** | |
+| **Mon lien** | Badges **À traiter**, **Mon envoi**, **Autre** |
+| **Type** / **Statut** / **Détenteur** / **Date et heure** | |
 | **Actions** | **Traiter** (si vous pouvez agir) ou **Voir** |
 
----
+État vide : **Aucune demande pour le moment.**
 
-## Detail d'une demande
-
-Page `/app/requests/{id}`, accessible en cliquant sur une reference ou une action.
-
-### En-tete
-
-- **Reference** et **titre** ;
-- **Type** et **statut** ;
-- Bouton retour vers la boite de reception.
-
-### Informations
-
-- **Description** (si renseignee) ;
-- **Demandeur** et **detenteur** actuel.
-
-### Details selon le type
-
-**Decaissement** : montant, justificatifs (liens telechargeables). Apres cloture, lien **Voir la depense creee** vers Comptabilite > Depenses.
-
-**Fourniture** : liste des articles (description, quantite, urgence).
-
-**RH** : nature (conge ou permission), dates de debut et fin, motif.
-
-**Refus** : motif affiche si la demande a ete refusee.
-
-### Traiter une demande (si vous etes detenteur)
-
-Section **Votre decision** visible uniquement quand vous pouvez agir (`can_act`) :
-
-1. **Commentaire de cloture** (optionnel).
-2. Bouton principal :
-   - **Executer et cloturer** pour un decaissement (cree la depense en comptabilite) ;
-   - **Cloturer** pour les autres types.
-3. Autres actions :
-   - **Transferer** : choisir un collaborateur + commentaire optionnel, puis **Confirmer le transfert** ;
-   - **Refuser** : motif obligatoire, puis **Confirmer le refus**.
-
-### Historique
-
-Chronologie des actions : Creee, Transferee, Refusee, Cloturee — avec auteur, date, commentaire et nouveau detenteur le cas echeant.
+Pour les actions sur une demande : [Traiter une demande](/modules/demandes-internes/traiter-demande).

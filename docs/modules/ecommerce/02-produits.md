@@ -5,61 +5,43 @@ sidebar_position: 3
 
 # Produits
 
-Onglet **Produits** (`/app/ecommerce/products`). Catalogue marketplace synchronise avec l'inventaire.
+Onglet **Produits** (`/app/ecommerce/products`).
 
-## En-tete
-
-Titre **Produits** avec rappel de synchronisation inventaire. Bouton **Actualiser** (hors formulaire ouvert).
+Sous-titre type : *Tous vos produits inventaire apparaissent ici. Publiez-les pour les rendre visibles sur la marketplace.*
 
 ## Indicateurs
 
 | Indicateur | Signification |
 |------------|---------------|
 | **Total** | Nombre de produits |
-| **Publies** | En ligne |
-| **Non publies** | Brouillons |
+| **Publiés** | En ligne |
+| **Non publiés en ligne** | Brouillons / non visibles |
 
-## Formulaire produit
+## Pas de bouton « Ajouter »
 
-S'ouvre via **Modifier** (crayon) sur une ligne. Pas de bouton **Ajouter** : les nouveaux produits viennent de l'[Inventaire](/modules/stock/produits).
+Les produits viennent du module [Stock](/modules/stock/produits). Ici vous **modifiez**, **publiez** ou **dépubliez**.
+
+État vide : *Ajoutez des produits dans le module Inventaire — ils apparaîtront ici automatiquement.*
+
+## Formulaire **Modifier le produit**
 
 | Champ | Description |
 |-------|-------------|
-| **Importer depuis l'inventaire** | Lie un produit stock existant |
-| **Nom** | Obligatoire |
-| **Description** | Texte libre |
-| **Prix / Prix promo** | Tarifs marketplace |
-| **Stock** | Desactive si lie a l'inventaire |
-| **Categorie** | Liste deroulante |
-| **Images** | Upload fichier ou URL (max 20), apercu avec suppression |
-| **Publie** | Brouillon ou Publie |
+| **Importer depuis l'inventory** | Lier un produit stock (ou *Aucun — stock et variantes manuels*) |
+| **Nom du produit** | Obligatoire (slug auto) |
+| **Description** | Max ~5000 caractères |
+| **Prix** / **Prix promo** | |
+| **Stock** | Désactivé si lié à l’inventaire |
+| **Catégorie** | Liste (pas d’écran de gestion des catégories) |
+| **Images (max 20)** | **Ajouter depuis l'ordinateur** ou URL ; image **Principale** |
+| **Publié** | **Brouillon** / **Publié** |
 
-Actions : **Enregistrer**, **Annuler**, fermeture (X).
+**Enregistrer** / **Annuler**.
 
-Dialogues de confirmation pour supprimer un produit ou une variante.
+## Liste
 
-## Barre d'outils
+Recherche ; badges **Publié** / **Brouillon** ; badge **Inventory** si lié ; **Publier** / **Dépublier** ; Modifier ; Supprimer (souvent impossible si lié inventaire).
 
-Recherche par nom, slug ou categorie avec effacement.
+### Variantes
 
-## Liste des produits
-
-Lignes deployables :
-
-- miniature, nom, slug ;
-- badge **Publie** / **Brouillon** ;
-- badge inventaire si lie ;
-- stock ;
-- **Publier** / **Depublier** ;
-- **Modifier**, **Supprimer** (suppression impossible si lie a l'inventaire).
-
-### Variantes (ligne deployee)
-
-- Compteur de variantes, badge **Depuis l'inventaire** si applicable ;
-- si inventaire : message de gestion automatique ;
-- si manuel : formulaire inline (Label, Prix, Stock) + liste avec edition/suppression.
-
-## Etats vides
-
-- Aucun produit : consulter l'Inventaire puis **Actualiser** ;
-- Aucun resultat de recherche.
+Ligne déployée : compteur ; **Depuis l'inventory** (verrouillé) ou saisie manuelle Label / Prix / Stock.

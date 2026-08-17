@@ -1,26 +1,28 @@
 ---
 sidebar_label: Documents
-sidebar_position: 8
+sidebar_position: 10
 ---
 
 # Documents
 
-Onglet **Documents** (`/app/hr/employee-documents`). Coffre-fort documentaire par employe.
+Onglet **Documents** (`/app/hr/employee-documents`). Coffre-fort documentaire par employé.
 
 ## Indicateurs
 
 | Indicateur | Signification |
 |------------|---------------|
 | **Total documents** | Nombre de fichiers |
-| **Categories utilisees** | Diversite des categories |
-| **Volume total** | Taille cumulee |
+| **Catégories utilisées** | Diversité des catégories |
+| **Volume total** | Taille cumulée |
 
 ## Recherche et filtres
 
-- **Recherche** : titre, nom employe, description ;
-- **Filtre categorie** : Contrat, Piece d'identite, CNSS, RIB, Certificat, Medical, Autre.
+- **Recherche** : titre, nom employé, description ;
+- **Filtre catégorie** : Contrat, Pièce d'identité, CNSS, RIB, Certificat, Médical, Autre.
 
-Boutons **Tout deplier** / **Tout replier** sur les groupes employes.
+Boutons **Tout déplier** / **Tout replier** sur les groupes employés.
+
+Lien **Formats d'attestation** → modèles d'attestation de travail / de stage (`/app/hr/employee-documents/certificate-format`).
 
 ## Uploader un document
 
@@ -28,19 +30,19 @@ Bouton **Uploader un document** :
 
 | Champ | Description |
 |-------|-------------|
-| **Employe** | Obligatoire |
+| **Employé** | Obligatoire |
 | **Titre** | Nom du document |
-| **Categorie** | Contrat de travail, Piece d'identite, CNSS, RIB, Certificat/Diplome, Certificat medical, Autre |
-| **Fichier** | Obligatoire a l'upload |
+| **Catégorie** | Contrat de travail, Pièce d'identité, CNSS, RIB, Certificat/Diplôme, Certificat médical, Autre |
+| **Fichier** | Obligatoire à l'upload |
 
-En modification : titre, categorie et remplacement de fichier optionnel.
+En modification : titre, catégorie et remplacement de fichier optionnel.
 
-## Vue par employe
+## Vue par employé
 
-Chaque employe apparait en carte repliable :
+Chaque employé apparaît en carte repliable :
 
-- Nombre de documents, categories, volume ;
-- Tableau : Document, Categorie, Taille, Ajoute le, Par ;
-- Actions : **Telecharger**, **Modifier**, **Supprimer**.
+- Nombre de documents, catégories, volume ;
+- Tableau : Document, Catégorie, Taille, Ajouté le, Par ;
+- Actions : **Télécharger**, **Modifier**, **Supprimer**.
 
-Les documents peuvent aussi etre ajoutes depuis la [fiche employe](/modules/rh/employes) (section Documents).
+Les documents peuvent aussi être ajoutés depuis la [fiche employé](/modules/rh/employes) (section Documents). Les attestations PDF peuvent être générées depuis la fiche ou via les [demandes de pièces](/modules/rh/demandes-pieces).

@@ -1,80 +1,64 @@
 ---
 sidebar_label: Achats
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Achats
 
-Onglet **Achats** (`/app/inventory/purchasing`). Commandes fournisseurs et reception de marchandises.
+Onglet **Achats** (`/app/inventory/purchasing`). Titre : **Achats fournisseurs**.
 
-Deux sous-onglets :
+:::info Bureau
+Cet écran est prévu pour un usage **bureau**.
+:::
 
-| Sous-onglet | Role |
-|-------------|------|
-| **Commandes** | Bons de commande (PO) |
-| **Fournisseurs** | Carnet fournisseurs |
-
-Barre de **recherche** commune (reference, fournisseur, statut…).
+Sous-onglets : **Commandes achat** | **Fournisseurs**.
 
 ---
 
-## Sous-onglet Fournisseurs
+## Fournisseurs
 
-Bouton **Nouveau fournisseur** :
+**Nouveau fournisseur** :
 
 | Champ | Description |
 |-------|-------------|
 | **Nom** | Obligatoire |
-| **Email** | Optionnel |
-| **Telephone** | Optionnel |
-| **N° fiscal** | Optionnel |
-
-Liste des fournisseurs avec nom, email et telephone.
+| **Email** / **Téléphone** | Optionnels |
+| **NIF / IFU** | Optionnel |
 
 ---
 
-## Sous-onglet Commandes
+## Commandes achat
 
-Bouton **Nouvelle commande** :
+**Nouveau bon de commande** :
 
 | Champ | Description |
 |-------|-------------|
-| **Fournisseur** | Fournisseur existant |
-| **Entrepot de reception** | Ou le stock sera incremente |
-| **Notes** | Commentaires internes |
-| **Lignes** | Produit, variante, quantite, cout unitaire (optionnel) |
+| **Fournisseur** | Obligatoire |
+| **Date de livraison** | Prévue |
+| **Nature comptable (réception)** | Ex. 601 / 622 / 605 |
+| **Lieu de livraison** | Suggestions entrepôts / géoloc (pas un unique « entrepôt de réception » figé à la création) |
+| **Notes** | Internes |
+| **Lignes** | Produit, variante, quantité, **coût unitaire** |
 
-Bouton **Ajouter une ligne** pour completer la commande.
+### Statuts
 
-### Statuts d'une commande
+**Brouillon** · **Confirmé** · **Partiel** · **Reçu** · **Soldé** · **Annulé**
 
-| Statut | Signification |
-|--------|---------------|
-| **Brouillon** | En cours de saisie |
-| **Confirme** | Envoyee au fournisseur, en attente de reception |
-| **Partiel** | Partiellement receptionnee |
-| **Recu** | Entierement receptionnee |
-| **Solde** | Recue et entierement payee |
-| **Annule** | Commande annulee |
+### Actions
 
-### Actions selon le statut
+| Action | Quand |
+|--------|-------|
+| **Télécharger PDF** | Selon disponibilité |
+| **Modifier** / **Supprimer** | Brouillon |
+| **Confirmer** | Brouillon (selon [Autorisations](/modules/stock/autorisations)) |
+| **Réceptionner** / **Réceptionner le reste** | Confirmé / Partiel |
+| **Payer** | S’il reste un solde |
+| **Historique paiements** | Si des paiements existent |
 
-**Brouillon** :
+### Réception
 
-- **Modifier** ;
-- **Confirmer** ;
-- **Supprimer**.
+Répartissez les quantités reçues **entre vos entrepôts** (réception multi-entrepôts). Le stock est mis à jour à la validation.
 
-**Confirme ou Partiel** :
+### Paiement
 
-- **Receptionner** (ou **Receptionner le reste**) : saisir les quantites recues par ligne. Le stock de l'entrepot est mis a jour.
-
-**Recu ou Partiel** (si solde > 0) :
-
-- **Payer** : montant, mode de paiement (banque, especes…), reference.
-
-**Si des paiements existent** :
-
-- **Historique paiements** : date, mode, reference, montant.
-
-Chaque carte commande affiche le fournisseur, le total, le paye, le solde et l'avancement de reception par ligne (barre de progression).
+Montant, moyen (**Virement**, **Espèces**, **Mobile Money**, **Carte**, **Chèque**), référence.

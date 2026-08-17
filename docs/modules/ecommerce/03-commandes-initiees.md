@@ -1,45 +1,36 @@
 ---
-sidebar_label: Commandes initiees
+sidebar_label: Commandes initiées
 sidebar_position: 4
 ---
 
-# Commandes initiees
+# Commandes initiées
 
-Onglet **Commandes initiees** (`/app/ecommerce/intents`). Demandes clients via WhatsApp a convertir en facture.
+Onglet **Commandes initiées** (`/app/ecommerce/intents`).
 
-## Sans boutique
+Demandes clients (souvent via WhatsApp) à convertir en **facture brouillon**.
 
-Message + **Creer ma boutique** vers [Parametres](/modules/ecommerce/parametres-boutique).
+## En-tête
 
-## En-tete
-
-Titre **Commandes initiees** avec sous-titre (WhatsApp vers facture brouillon). Badge du nombre **en attente**.
+Sous-titre WhatsApp → facture ; badge **N en attente**.
 
 ## Recherche
 
-Reference, client, telephone, produit ou entrepot.
+*Référence, client, téléphone, produit…* (le filtre peut aussi porter sur l’entrepôt en coulisse).
 
 ## Tableau
 
 | Colonne | Contenu |
 |---------|---------|
-| **Reference** | Identifiant commande |
+| **Référence** | Identifiant |
 | **Client** | Nom |
-| **Telephone** | Lien WhatsApp |
-| **Produit** | Article demande |
-| **Entrepot** | Badge ou **A assigner** |
-| **Date** | Date de la demande |
-| **Actions** | **Voir le produit** (externe), **Traiter** |
+| **Téléphone** | Lien WhatsApp |
+| **Produit** | Article demandé |
+| **Entrepôt** | Ou **À assigner** |
+| **Date** | |
+| Actions | **Voir le produit**, **Traiter** |
 
-## Traiter une commande
+## Traiter
 
-Bouton **Traiter** :
-
-- si l'entrepot manque : modale **Choisir l'entrepot** (select rechercheable, contexte reference + produit) ;
-- creation d'une **facture brouillon** dans [Facturation](/modules/facturation/factures) ;
-- redirection vers la facture creee.
-
-## Etats vides
-
-- Erreur API affichee si echec ;
-- **Aucune commande en attente** avec explication.
+1. **Traiter** ;
+2. Si pas d’entrepôt : modale **Choisir l'entrepôt** ;
+3. Création d’une facture brouillon → redirection `/app/billing/invoices/{id}` ([Facturation](/modules/facturation/factures)).

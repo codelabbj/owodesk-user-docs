@@ -1,125 +1,79 @@
 ---
-sidebar_label: Facture unientrepot
+sidebar_label: Facture unientrepôt
 sidebar_position: 5
 ---
 
-# Facture unientrepot
+# Facture unientrepôt
 
-Onglet **Facture unientrepot** (`/app/billing/invoices/new`). Creation d'une facture avec **un seul entrepot** de sortie de stock pour toutes les lignes.
+Onglet **Facture unientrepôt** (`/app/billing/invoices/new`). Facture avec **un seul entrepôt** de sortie pour toutes les lignes.
 
-## Acceder a la page
+## Accéder à la page
 
-Menu lateral **Facturation** > onglet **Facture unientrepot**.
+Menu latéral **Facturation** → **Facture unientrepôt**.
 
-Indicateur en haut : **Facture unientrepot**.
+## Structure
 
-## Structure de la page
-
-Deux colonnes :
-
-- **Gauche** : apercu du document (comme sur papier).
-- **Droite** : parametres (entrepot, AIB, mode de paiement, validation).
+- **Gauche** : aperçu du document ;
+- **Droite** : entrepôt, AIB, paiement, validation.
 
 ---
 
-## En-tete du document
-
-### Type de document
-
-Liste deroulante :
+## Type de document
 
 | Type | Usage |
 |------|-------|
 | **Vente** | Facture classique |
-| **Avoir Vente** | Avoir sur une vente locale (reference MECeF requise) |
-| **Export** | Vente export (TVA exoneree) |
-| **Avoir Export** | Avoir sur vente export |
+| **Avoir Vente** | Avoir local (réf. MECeF / facture originale) |
+| **Export** | Vente export (TVA exonérée) |
+| **Avoir Export** | Avoir sur export |
 
-Le type peut s'ajuster automatiquement selon le **pays du client** (hors Benin → Export).
-
-Lors d'un avoir pre-rempli depuis une facture existante (`?from_invoice=...`), le type et les lignes sont charges automatiquement.
-
-### Reference MECeF (avoir)
-
-Pour **Avoir Vente** ou **Avoir Export** : saisir le **code MECeF de la facture originale**.
+Le type peut s’ajuster selon le **pays du client** (hors Bénin → Export).
 
 ---
 
 ## Destinataire (client)
 
-Par defaut : **Client Divers**. Cliquez pour ouvrir le selecteur :
+Sélecteur **Particulier** / **Entreprise** :
 
-- Choisir un **contact CRM** existant ;
-- Ou laisser **Client Divers**.
+- choisir un contact ou une entreprise CRM existante ;
+- **+ Nouveau particulier** / **+ Nouvelle entreprise** ;
+- option **Facturer un client divers (sans nom)**.
 
-Bouton **+ Nouveau Client** : ouvre une fenetre de creation rapide (prenom, nom, email, telephone, entreprise, IFU, adresse, ville, pays). Le contact est enregistre dans le CRM et selectionne automatiquement.
+Le nom choisi s’affiche ensuite dans la liste, le détail et le PDF.
 
 ---
 
-## Lignes de facture
-
-Pour chaque ligne :
+## Lignes
 
 | Champ | Description |
 |-------|-------------|
-| **Produit** | Selection dans le catalogue stock |
-| **Variante** | Obligatoire si le produit a des variantes |
-| **Prix unitaire** | Pre-rempli depuis le produit, modifiable |
-| **Quantite** | Nombre d'unites |
-| **Groupe de taxe** | A, B, C… (taux TVA selon le groupe) |
-| **Total** | Calcule automatiquement |
+| **Produit** | Catalogue stock |
+| **Variante** | Si le produit en a |
+| **Prix unitaire** | Modifiable |
+| **Quantité** | Unités |
+| **Groupe de taxe** | TVA |
+| **Total** | Calculé |
 
-- Bouton **+** pour ajouter une ligne.
-- Icone corbeille pour supprimer une ligne.
+Stock insuffisant : bannière + **Gérer** (ajouter / ajuster). La création du brouillon est bloquée tant que le stock pose problème.
 
-### Stock insuffisant
-
-Si le stock est insuffisant dans l'entrepot choisi, une banniere alerte s'affiche avec bouton **Gerer** pour :
-
-- **Ajouter** du stock (entree) ;
-- ou **Ajuster** le stock.
-
-La creation du brouillon est bloquee tant qu'un probleme de stock subsiste.
-
-### Export
-
-Si le type est Export : message **Operation exoneree de TVA (Groupe C)**.
+Export : message d’exonération TVA (groupe C).
 
 ---
 
-## Panneau lateral
+## Panneau latéral
 
-### Entrepot de sortie
+### Entrepôt
 
-Selectionnez l'entrepot unique pour toute la facture. Le stock sera deduit de cet entrepot a la finalisation.
+Un entrepôt pour toute la facture (déduction à la finalisation).
 
-### AIB (Retenue a la source)
+### AIB
 
-| Option | Taux |
-|--------|------|
-| Aucun AIB — Client particulier | 0 % |
-| AIB 1 % — Entreprise avec IFU | 1 % |
-| AIB 5 % — Sans IFU / Informel | 5 % |
+**Aucun AIB** · **AIB 1%** · **AIB 5%**
 
-### Mode de paiement
+### Mode de paiement à la création
 
-| Option | Effet |
-|--------|-------|
-| Aucun — Choisir plus tard | Pas de paiement a la creation |
-| Especes | Paiement confirme a la creation |
-| Mobile Money | Idem |
-| Carte bancaire | Idem |
-| Virement bancaire | Idem |
-| Cheque | Idem |
-| A credit — Facture impayee | Facture laissee en creance |
+Aucun / Espèces / Mobile Money / Carte / Virement / Chèque / **À crédit — Facture impayée (créance)**
 
 ### Valider
 
-Bouton **Creer le Brouillon** :
-
-- Desactive si aucune ligne valide, creation en cours, ou stock insuffisant.
-- Redirige vers le [detail de la facture](/modules/facturation/factures#detail-dune-facture) pour finaliser, encaisser ou creer une facture pro.
-
-:::info Facture pro
-Le message rappelle qu'il faut d'abord creer le brouillon, puis generer la facture pro depuis la page de detail.
-:::
+**Créer le Brouillon** → [détail de la facture](/modules/facturation/factures#detail-dune-facture) pour finaliser, encaisser ou créer une facture pro.

@@ -5,81 +5,49 @@ sidebar_position: 3
 
 # Sessions de caisse
 
-Onglet **Sessions de caisse** (`/app/pos/sessions`). Ouverture, cloture et rapports Z.
+Onglet **Sessions de caisse** (`/app/pos/sessions`).
 
-## En-tete
-
-Si aucune session n'est ouverte : bouton **Ouvrir une session**.
-
-## Session en cours
-
-Banniere verte avec :
-
-- numero de session et entrepot ;
-- heure d'ouverture (**Depuis HH:MM**) ;
-- **montant encaisse** et **nombre de ventes** ;
-- **Z de caisse** : ouvre le rapport detaille ;
-- **Cloturer** : modale de fin de session.
+Sous-titre : *Gérez l'ouverture, la clôture et les Z de caisse.*
 
 ## Ouvrir une session
 
-| Champ | Description |
-|-------|-------------|
-| **Entrepot / Caisse** | Entrepot autorise pour les ventes |
-| **Fond de caisse** | Montant initial en especes |
-| **Notes** | Optionnel |
-
-Bouton **Ouvrir la caisse**.
-
-## Cloturer une session
-
-Resume de la session :
-
-- CA total, nombre de ventes ;
-- repartition **Especes**, **Carte**, **Mobile Money** ;
-- **Fond initial + especes encaissees = cash theorique**.
+Sans session : bouton **Ouvrir une session**.
 
 | Champ | Description |
 |-------|-------------|
-| **Fond de caisse compte** | Montant reel compte en caisse |
-| **Notes de cloture** | Optionnel |
+| **Entrepôt / Caisse** | Obligatoire |
+| **Fond de caisse (montant initial)** | Espèces de départ |
+| **Notes (optionnel)** | Commentaire d’ouverture |
 
-Affichage de l'**ecart de caisse** (manque, excedent ou caisse equilibree).
+Confirmation avant ouverture.
 
-Actions :
+## Session ouverte
 
-- **Email rapport** : envoi du rapport par email ;
-- **Cloturer la caisse**.
+Bannière : **Session #N ouverte**, entrepôt, caissier, **Depuis HH:MM**, montant encaissé, nombre de ventes.
 
-## Historique des sessions
+Boutons : **Z de caisse**, **Clôturer**.
 
-Tableau des sessions cloturees :
+## Clôturer
 
-| Colonne | Contenu |
-|---------|---------|
-| **Session** | Numero |
-| **Caisse** | Entrepot |
-| **Ouverture / Cloture** | Dates et heures |
-| **CA** | Chiffre d'affaires |
-| **Ventes** | Nombre |
-| **Fond initial / Fond compte** | Montants |
-| **Ecart** | Difference de caisse |
-| **Z** | Bouton pour ouvrir le rapport |
+Écran complet (plus détaillé que le raccourci Encaissement) :
 
-## Rapport Z de caisse
+- cartes **CA total**, **Ventes**, **Espèces**, **Carte**, **Mobile Money**, **Chèque** ;
+- fond initial + espèces = cash théorique ;
+- **Fond de caisse compté (montant réel)** ;
+- **Écart de caisse** (Manque / Excédent / Caisse équilibrée) ;
+- **Notes de clôture (optionnel)** ;
+- **Email rapport** (optionnel) ;
+- **Clôturer la caisse**.
 
-Modale **Z de caisse** :
+## Historique
 
-### Resume
+Colonnes typiques : Session, **Caissier**, Caisse, Ouverture, Clôture, CA, Ventes, Fond initial, Fond compté, Écart, bouton **Z**.
 
-- CA total, ventes, **annulations**, **ecart caisse**.
+## Z de caisse
 
-### Ventes par mode de paiement
+Rapport de période / session :
 
-Tableau : mode, nombre de ventes, total.
-
-### Top produits vendus
-
-Tableau : produit, quantite, total.
-
-Bouton **Envoyer par email** ou **Fermer**.
+- résumé : CA, Ventes, **Annulations**, **Écart caisse** ;
+- **Ventes par mode de paiement** (dont **Chèque**) ;
+- **Top produits vendus** ;
+- **Envoyer par email** / **Fermer**.

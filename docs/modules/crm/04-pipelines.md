@@ -5,55 +5,27 @@ sidebar_position: 5
 
 # Pipelines
 
-Onglet **Pipelines** (`/app/crm/pipelines`). Configuration des pipelines et de leurs etapes.
+Onglet **Pipelines** (`/app/crm/pipelines`). Titre : **Pipelines & étapes**.
 
-## Section Pipelines
+:::info Bureau
+Souvent réservé à l’usage **bureau**.
+:::
 
-En-tete avec compteur + **Ajouter pipeline**.
+## Pipelines
 
-### Formulaire pipeline
+- **Créer le pipeline** (champ **Nom du pipeline**) ;
+- Liste : nom, badge nombre d’étapes, pastilles, supprimer (confirmation).
 
-- **Nom** (obligatoire) ;
-- creation inline au clic sur **Ajouter pipeline**.
+Sélectionnez un pipeline pour éditer ses étapes.
 
-### Liste
-
-Lignes cliquables pour selectionner un pipeline :
-
-- nom ;
-- badge nombre d'etapes ;
-- pastilles des etapes (lecture seule) ;
-- **Supprimer** (avec confirmation).
-
-Etat vide si aucun pipeline.
-
-## Section Etapes
-
-Visible apres selection d'un pipeline.
-
-### Ajouter une etape
+## Étapes du pipeline sélectionné
 
 | Champ | Description |
 |-------|-------------|
-| **Nom** | Obligatoire |
-| **Ordre** | Numero d'ordre |
-| **Probabilite par defaut** | Pourcentage |
+| **Nom de l'étape** | Obligatoire |
+| **Ordre** | Position dans le Kanban |
+| **Probabilité par défaut (%)** | Pour les affaires de cette étape |
 
-### Tableau des etapes
+Bouton **Ajouter l'étape**. Suppression avec confirmation.
 
-| Colonne | Contenu |
-|---------|---------|
-| **Nom** | Libelle etape |
-| **Ordre** | Position |
-| **Probabilite** | % |
-| **Actions** | Supprimer |
-
-Messages si aucun pipeline selectionne ou aucune etape.
-
-## Reordonnancement
-
-Le reordonnancement par glisser-deposer n'est pas disponible sur cette page. Utilisez **Gerer les etapes** depuis l'onglet [Accueil](/modules/crm/accueil) pour reorganiser les colonnes du Kanban.
-
-## Suppression
-
-Confirmations avant suppression d'un pipeline ou d'une etape.
+Les affaires se manipulent ensuite sur l’[Accueil](/modules/crm/accueil) (Kanban).

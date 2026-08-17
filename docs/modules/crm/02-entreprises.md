@@ -5,51 +5,35 @@ sidebar_position: 3
 
 # Entreprises
 
-Onglet **Entreprises** (`/app/crm/companies`). Repertoire des comptes clients et prospects.
+Onglet **Entreprises** (`/app/crm/companies`). Titre : **Entreprises & comptes**.
 
-## En-tete
+## Liste
 
-Titre avec **nombre d'entreprises**. Bouton **Ajouter entreprise**.
+- Bouton **Ajouter l'entreprise** ;
+- Recherche *Rechercher une entreprise ou un secteur...* ;
+- Colonnes : **Raison sociale** (lien vers la fiche), **IFU**, **Secteur**, **Taille**, **Pays**, **Téléphone**, **Site web**, modifier / supprimer.
 
-## Formulaire creation / edition
-
-Panneau inline (pas de page detail separee) :
+## Formulaire
 
 | Champ | Description |
 |-------|-------------|
-| **Nom** | Obligatoire |
-| **Secteur** | Texte libre |
-| **Taille** | Effectif ou categorie |
-| **Site web** | URL |
-| **Adresse** | Adresse postale |
-| **Pays** | Pays |
-| **Telephone** | Saisie internationale (PhoneInput) |
-| **LinkedIn** | URL profil ou page |
+| **Raison sociale** / **Nom** | Obligatoire |
+| **Email** / **Téléphone** | |
+| **Secteur**, **Taille**, **Site web**, **Adresse** | |
+| **IFU**, **Ville**, **Pays** | |
+| **URL LinkedIn** | Optionnel |
 
-Icones d'aide contextuelle sur certains champs.
+Sur mobile : **Plus d'informations…** / **Moins d'informations**.
 
-## Recherche
+Suppression avec confirmation (**Supprimer cette entreprise ?**).
 
-Par nom ou secteur.
+## Fiche entreprise (vue 360°)
 
-## Tableau
+Cliquez sur le **nom** → `/app/crm/companies/{id}`.
 
-| Colonne | Contenu |
-|---------|---------|
-| **Entreprise** | Avatar + nom |
-| **Secteur** | Badge |
-| **Taille** | — |
-| **Pays** | — |
-| **Telephone** | — |
-| **Site web** | Lien externe |
-| **Actions** | Modifier, Supprimer |
+- Retour **← Retour aux entreprises** ;
+- Identité (secteur, taille, pays, contacts, IFU…) ;
+- KPI : **Pipeline**, **Facturé**, **Encaissé**, **Reste dû**, **Impayés en retard** ;
+- Sous-onglets : **Synthèse** | **Facturation** | **Commercial** | **Activités** | **Projets** (si module Projets) | **Contacts**.
 
-Pas de clic sur la ligne vers une fiche : l'edition se fait via l'icone crayon.
-
-Pour une vue consolidee par entreprise, utilisez [Vue 360°](/modules/crm/vue-360).
-
-## Suppression
-
-Dialogue de confirmation avant suppression.
-
-Etat vide si aucune entreprise.
+Détail des sous-onglets : voir [Vue 360°](/modules/crm/vue-360).

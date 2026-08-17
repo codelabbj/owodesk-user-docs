@@ -6,25 +6,27 @@ sidebar_position: 1
 
 Le module **Demandes & approbations** (`/app/requests`) centralise les demandes internes et leur circuit de validation entre collaborateurs.
 
-Ouvrez-le depuis le menu lateral **Demandes & approbations**. Le sous-menu reprend les onglets de l'application :
+Sous-titre dans l’app : *Centralisez les demandes internes et transférez-les librement entre collaborateurs.*
 
-| Onglet dans l'app | Documentation |
+| Onglet dans l’app | Documentation |
 |-------------------|---------------|
-| **Boite de reception** | [Boite de reception](/modules/demandes-internes/boite-reception) |
+| **Boîte de réception** | [Boîte de réception](/modules/demandes-internes/boite-reception) |
 | **Nouvelle demande** | [Nouvelle demande](/modules/demandes-internes/nouvelle-demande) |
+
+Le **détail** et les actions (clôturer, transférer, refuser, renvoyer) sont décrits dans [Traiter une demande](/modules/demandes-internes/traiter-demande).
 
 ## Types de demandes
 
 | Type | Usage |
 |------|-------|
-| **Decaissement** | Sortie de fonds (montant, mode de paiement, justificatifs) |
-| **Fourniture** | Liste d'articles a commander |
-| **RH** | Conge ou permission avec dates |
+| **Décaissement** | Sortie de fonds (montant, mode de paiement, justificatifs) |
+| **Fourniture** | Liste d’articles à obtenir (texte libre, pas de lien Stock) |
+| **RH** | Congé ou permission avec dates (circuit **interne** à ce module, distinct des [congés RH](/modules/rh/conges-permissions)) |
 | **Autre** | Demande libre (titre + description) |
 
 ## Parcours type
 
-1. Creez une [nouvelle demande](/modules/demandes-internes/nouvelle-demande) et assignez un premier destinataire.
-2. Le destinataire la traite depuis la [boite de reception](/modules/demandes-internes/boite-reception).
-3. Il peut **cloturer**, **transferer** a un autre collaborateur ou **refuser** avec motif.
-4. Pour un decaissement cloture, une depense est creee en comptabilite.
+1. Créez une [nouvelle demande](/modules/demandes-internes/nouvelle-demande) et assignez un premier destinataire.
+2. Le destinataire la voit dans la [boîte de réception](/modules/demandes-internes/boite-reception) (badge **À traiter**).
+3. Il peut **clôturer**, **transférer**, **refuser** ou **renvoyer au précédent** selon le cas.
+4. Pour un décaissement clôturé, une dépense peut être créée en **[Trésorerie → Dépenses](/modules/tresorerie/depenses)**.

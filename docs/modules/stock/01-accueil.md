@@ -5,42 +5,32 @@ sidebar_position: 2
 
 # Accueil
 
-Onglet **Accueil** du module Stock (`/app/inventory/dashboard`). Vue synthetique des alertes et de l'activite recente.
+Onglet **Accueil** (`/app/inventory/dashboard`). Titre : **Tableau de bord stock**.
 
-## Acceder a la page
+## Indicateurs
 
-Menu lateral **Stock** > onglet **Accueil** (page par defaut du module).
+| Indicateur | Signification |
+|------------|---------------|
+| **Valeur totale du stock** | Valorisation au **prix d’achat** |
+| **Rupture de stock** | Articles à quantité 0 |
+| **Stock faible** | Sous le seuil d’alerte |
+| **Produits actifs** | Produits non archivés |
 
 ## Actions rapides
 
-Quatre raccourcis en haut de page :
-
-| Bouton | Destination |
-|--------|-------------|
-| **Ajouter un produit** | [Produits](/modules/stock/produits) |
-| **Enregistrer un mouvement** | [Mouvements](/modules/stock/mouvements) |
-| **Nouvelle commande** | [Achats](/modules/stock/achats) |
-| **Gerer les entrepots** | [Entrepots](/modules/stock/entrepots) |
+- **Ajouter un produit**
+- **Enregistrer un mouvement**
+- **Nouvelle commande**
+- **Gérer les entrepôts**
 
 ## Alertes de stock
 
-Si des produits sont en rupture ou sous le seuil d'alerte, une section **Alertes de stock** s'affiche :
-
-- **Rupture** : quantite a zero (produit + entrepot) ;
-- **Stock faible** : quantite inferieure ou egale au seuil (affiche `quantite / seuil`).
-
-Cliquez sur une alerte pour ouvrir [Niveaux de stock](/modules/stock/niveaux-stock).
+Liste des ruptures / stocks faibles (badges **Rupture**, quantité / seuil). Un clic mène vers [Niveaux de stock](/modules/stock/niveaux-stock).
 
 ## Derniers mouvements
 
-Tableau des 5 derniers mouvements avec :
+Les 5 derniers mouvements : Type, Produit, Entrepôt, stock avant → après, quantité, référence / motif, date.
 
-- **Type** : Entree, Sortie, Ajust., Transfert, Perte, Dechet, Casse ;
-- **Produit** et variante ;
-- **Entrepot** ;
-- **Stock avant → apres** ;
-- **Quantite** (+ ou −) ;
-- **Reference / motif** ;
-- **Date**.
+Types affichés : Entrée, Sortie, Ajust., Transfert, Perte, Déchet, Casse.
 
-Lien **Tout voir →** : ouvre [Mouvements](/modules/stock/mouvements).
+Lien **Tout voir →** vers [Mouvements](/modules/stock/mouvements).

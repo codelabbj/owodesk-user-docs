@@ -5,78 +5,127 @@ sidebar_position: 3
 
 # Gestion de la paie
 
-Onglet **Gestion de la paie** (`/app/hr/payroll`). Periodes de paie, masse salariale et paiements individuels ou groupes.
+Onglet **Gestion de la paie** (`/app/hr/payroll`).
+
+Sous-titre dans l’app : *Créez une période, générez les bulletins, validez et payez vos employés.*
+
+C’est le **parcours principal** de la paie. Les anciennes pages séparées (périodes, bulletins, historique) ne sont plus dans le menu : tout est centralisé ici.
 
 ## Indicateurs
 
 | Indicateur | Signification |
 |------------|---------------|
-| **Employes** | Nombre d'employes dans le scope paie |
-| **Masse salariale** | Total a payer sur la periode |
-| **Total Paye** | Montant deja verse |
-| **En attente** | Reste + employes sans bulletin ou en attente |
+| **Employés** | Nombre d’employés dans le périmètre paie |
+| **Masse salariale** | Total à payer sur la période |
+| **Total payé** | Montant déjà versé |
+| **… en attente** | Collaborateurs / bulletins encore à traiter |
 
-## Periodes de paie
+## Périodes de paie
 
-Liste des periodes (nom, dates, statut : Brouillon, Validee, Cloturee).
+Liste des périodes (mois, dates, statut).
 
 | Action | Effet |
 |--------|-------|
-| **Nouvelle periode** | Creer une periode (nom, dates, statut) |
-| **Clic sur une periode** | Filtre le tableau employes |
-| **Modifier / Supprimer** | Icones sur chaque periode |
-| **Voir plus...** | Acces a toutes les periodes |
+| **Nouveau mois** / **Nouvelle période** | Crée une période pour un mois |
+| **Paie multi-mois** | Prépare un lot sur plusieurs mois (un bulletin par collaborateur et par mois) |
+| **Clic sur une période** | Affiche les bulletins et actions de cette période |
+| **Voir plus…** | Affiche les périodes plus anciennes |
 
-Une periode doit etre **selectionnee** pour afficher les employes et les actions de paie.
+**Statuts** courants d’une période : **Brouillon**, **Validée**, **Clôturée** (et suivi du paiement des bulletins).
 
-## Deductions et primes automatiques (periode selectionnee)
+Une période doit être **sélectionnée** pour travailler.
 
-Deux panneaux cote a cote :
+## Workflow d’une période
 
-**Deductions automatiques** : liste par employe, boutons **Gerer** et **Ajouter** (deduction fixe recurrente, pret, ponctuelle).
+Ordre typique :
 
-**Primes automatiques** : meme logique pour les primes (fixe recurrente ou ponctuelle).
+1. **Créer brouillons** / **Générer les brouillons** — génère les fiches de paie en brouillon ;
+2. Ajuster primes, déductions et retenues sur chaque fiche si besoin ;
+3. **Valider** (une fiche) ou **Valider les brouillons** / **Valider tout** — verrouille les montants ;
+4. **Payer** (individuel), **Payer la sélection** ou **Payer tous (période)** ;
+5. Au besoin : **Rouvrir le bulletin** (si autorisé) ou **Invalider** (souvent réservé au propriétaire).
 
-## Filtres employes
+## Déductions et primes automatiques
 
-- **Recherche** par nom ou matricule ;
-- **Statut paiement** : Paye, En attente, Partiel, En retard ;
-- **Departement**.
+Deux panneaux (période sélectionnée) :
 
-## Paiement groupe
+- **Déductions automatiques** : fixe récurrente, prêt, ponctuelle — boutons **Gérer** / **Ajouter** ;
+- **Primes automatiques** : fixe récurrente ou ponctuelle — même logique.
 
-Barre d'actions (periode selectionnee) :
+Ces éléments alimentent les bulletins de la période.
 
-| Bouton | Effet |
-|--------|-------|
-| **Payer la selection** | Paie les employes coches |
-| **Payer tous (periode)** | Paie tous les eligibles de la periode |
-
-Cases a cocher par ligne et case **tout selectionner** en en-tete.
-
-## Tableau employes (periode active)
+## Tableau des employés / bulletins
 
 | Colonne | Contenu |
 |---------|---------|
-| **Employe** | Nom, matricule, statut actif |
+| **Employé** | Nom, matricule, statut |
 | **Poste** | Fonction |
-| **Salaire Base** | Salaire brut de reference |
-| **Primes/Ded.** | Resume des ajustements |
-| **Statut** | Paye, En attente, Partiel, En retard |
-| **Paiement** | Net du, detail +/- primes et deductions, deja paye |
-| **Actions** | **Payer** (si non solde), **Fiche** (telecharger bulletin PDF si disponible) |
+| **Salaire Base** | Salaire brut de référence |
+| **Primes/Déd.** | Résumé des ajustements |
+| **Émission** | État du bulletin (brouillon, validé…) |
+| **Paiement** | Payé, en attente, partiel… |
+| **Net à payer** | Montant net |
 
-Pagination si plusieurs pages.
+Badges utiles : **Fiche** (bulletin salarié) ou **Facture stagiaire** (selon le droit à la fiche de paie du stagiaire).
 
-## Payer un employe (modale)
+Filtres : recherche, département, statut de paiement, etc.
 
-- Montant a verser ;
-- **Mode de paiement** : Especes, Mobile Money, Virement bancaire, Cheque ;
-- Option **Paiement PAL** (Mobile Money via PAL) avec numero de telephone ;
-- Primes et deductions ajustables sur la fiche avant validation.
+## Détail d’un bulletin
 
-## Paiement groupe (modale)
+Dans la fiche / modale :
 
-Meme modes de paiement, confirmation du montant total et liste des beneficiaires.
+- Primes et déductions manuelles ajustables tant que le bulletin est en brouillon ;
+- **Retenues statutaires** pour un employé **déclaré** : **CNSS**, **ITS**, **Redevance SRTB** (et autres retenues légales selon la config) ;
+- Actions : enregistrer le brouillon → **Voir / télécharger la fiche** → **Valider** → **Payer** ;
+- **Rouvrir le bulletin** si vous devez corriger après validation (selon droits).
 
-Les routes `/app/hr/pay-periods`, `/app/hr/payslips` et `/app/hr/payment-history` ne sont pas dans le menu : tout est centralise sur cette page.
+### Bulletin PDF — libellés importants
+
+Sur le PDF / aperçu, vous retrouvez notamment :
+
+- **BULLETIN DE PAIE** ;
+- **Salaire de base**, primes, heures supplémentaires, **Salaire brut** ;
+- Retenues : **Retenue ITS**, **Retenue CNSS**, **Redevance SRTB**, **VPS** le cas échéant ;
+- **Total retenues**, **Salaire net**, **NET A PAYER** ;
+- Cumuls depuis janvier et identité (CNSS, IFU…).
+
+:::info Libellé SRTB
+La redevance apparaît sous le nom **Redevance SRTB** (anciennement ORTB dans certaines versions). C’est le libellé à utiliser avec vos collaborateurs et sur les documents.
+:::
+
+La **Redevance SRTB** s’applique selon les règles configurées côté serveur (périodes type mars / juin et seuil d’exonération). Les montants détaillés ne sont pas forcément éditables dans l’écran Paramètres.
+
+## Payer
+
+### Un employé
+
+- Montant à verser ;
+- **Mode de paiement** : Espèces, Mobile Money, Virement bancaire, Chèque, Autre ;
+- Option **Virement Mobile Money via PAL** (si activé dans **Paramètres → Paiements**), avec numéro de téléphone.
+
+### Paiement groupé
+
+Confirmation du montant total et de la liste des bénéficiaires, mêmes modes de paiement.
+
+### Stagiaire sans fiche de paie
+
+Parcours spécifique : montant manuel, facture éventuelle, validation puis paiement (**Facture stagiaire**).
+
+## Paie multi-mois
+
+Bouton **Paie multi-mois** :
+
+- Choix **Du mois** / **Au mois** ;
+- Note et référence optionnelles (visibles sur bulletins / historique) ;
+- **Prévisualiser** puis **Créer les bulletins mensuels**, éventuellement **Valider** puis **Payer le lot**.
+
+Utile pour un rattrapage sur plusieurs mois.
+
+## Configuration connexe
+
+- **Paramètres → Configuration de la paie** : taux CNSS, plafond, cotisations patronales, slogan / pied de page / signature du bulletin.
+- **Paramètres → Paiements** : activation PAL pour la paie.
+
+## Routes hors menu
+
+`/app/hr/pay-periods`, `/app/hr/payslips` et `/app/hr/payment-history` peuvent encore exister techniquement, mais le travail quotidien se fait sur **Gestion de la paie**. L’historique reste aussi consultable depuis la [fiche employé](/modules/rh/employes).

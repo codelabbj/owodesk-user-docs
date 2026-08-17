@@ -1,40 +1,22 @@
 ---
-sidebar_label: Impression & scan
+sidebar_label: Impression & Scan
 sidebar_position: 5
 ---
 
-# Impression & scan
+# Impression & Scan
 
-Onglet **Impression & Scan** (`/app/pos/print`). Reimpression de tickets et recherche par scan.
+Onglet **Impression & Scan** (`/app/pos/print`).
 
-## Scanner / rechercher une vente
+Sous-titre : *Retrouvez et réimprimez n'importe quel ticket.*
 
-Champ en haut : **Scanner un code-barres ou saisir un numero...**
+## Rechercher une vente
 
-- scan du numero de vente ;
-- saisie manuelle + Entree ;
-- auto-detection apres courte pause (douchette).
+- Champ *Scanner un code-barres ou saisir un numéro...* ;
+- filtre liste *Numéro, client, montant...*
 
-Si la vente est trouvee, elle est selectionnee automatiquement.
+## Aperçu et impression
 
-## Liste des ventes (colonne gauche)
+- Sélectionnez une vente → **Aperçu du ticket** ;
+- **Imprimer**.
 
-Recherche texte : **Numero, client, montant...**
-
-Chaque ligne affiche :
-
-- **#numero** ;
-- client (si renseigne) ;
-- statut (completed, draft, cancelled…) ;
-- montant total.
-
-Cliquez sur une vente pour l'afficher dans l'apercu.
-
-## Apercu du ticket (colonne droite)
-
-- Apercu format ticket thermique (organisation, lignes, total, mode de paiement) ;
-- bouton **Imprimer** : lance l'impression via le navigateur.
-
-Sans selection : message **Selectionnez une vente**.
-
-Les libelles de paiement affiches : Especes, Carte bancaire, Mobile Money.
+Le ticket reprend les modes de paiement (**Espèces**, **Carte bancaire**, **Mobile Money**, **Chèque**) et, si la vente a été normalisée, les informations **MECeF** (réf. fiscale, QR…).

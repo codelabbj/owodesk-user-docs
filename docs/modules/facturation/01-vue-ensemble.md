@@ -5,59 +5,37 @@ sidebar_position: 2
 
 # Vue d'ensemble
 
-Onglet **Vue d'ensemble** du module Facturation (`/app/billing/dashboard`). Cette page resume l'activite de facturation et donne un acces rapide a la creation de factures.
+Onglet **Vue d'ensemble** (`/app/billing/dashboard`). Résumé de l’activité et accès rapide à la création.
 
-## Acceder a la page
+## Accéder à la page
 
-1. Menu lateral **Facturation**.
-2. Onglet **Vue d'ensemble** (premier onglet, page par defaut du module).
+Menu latéral **Facturation** → **Vue d'ensemble** (page par défaut du module).
 
 ## Indicateurs (KPI)
 
-Trois cartes en haut de page :
-
 | Indicateur | Signification |
 |------------|---------------|
-| **Argent en attente** | Montant total des factures non soldees |
-| **Encaisse ce jour** | Montant encaisse aujourd'hui |
-| **Factures recentes** | Nombre de factures dans la liste recente |
+| **En attente** | Montant des factures non soldées |
+| **Encaissé jour** | Montant encaissé aujourd’hui |
+| **Récentes** | Nombre de factures dans la liste récente |
 
 ## Alerte factures en retard
 
-Si des factures sont en retard (impayees depuis plus de 30 jours), une banniere orange s'affiche avec :
+Si des factures sont en retard, une bannière indique le nombre concerné et un lien **Voir** vers [Factures](/modules/facturation/factures).
 
-- le nombre de factures concernees ;
-- le montant total ;
-- les noms des clients ;
-- un lien **Voir** vers la liste [Factures](/modules/facturation/factures).
+## Dernières factures
 
-## Dernieres factures
+Tableau : **Référence**, **Client**, **Montant**, **État** (**Payée**, **Partiel**, **Impayée**).
 
-Tableau des factures les plus recentes avec :
-
-- **Reference** (numero de facture) ;
-- **Client** ;
-- **Montant** ;
-- **Etat** de paiement : Payee, Partiel ou Impayee.
-
-Cliquez sur une ligne pour ouvrir le [detail de la facture](/modules/facturation/factures#detail-dune-facture).
-
-Lien **Toutes** en haut a droite : ouvre la liste complete des factures.
+Cliquez une ligne pour ouvrir le [détail](/modules/facturation/factures#detail-dune-facture).
 
 ## Derniers encaissements
 
-Tableau des paiements recents :
-
-- **Reference** (facture ou vente POS) ;
-- **Mode** de paiement ;
-- **Montant** ;
-- **Date**.
-
-Lien **Paiements** : redirige vers la liste des factures.
+Tableau : **Référence** (facture ou vente POS), **Mode**, **Montant**, **Date**.
 
 ## Actions rapides
 
-Deux boutons en haut a droite :
+- **Facture unientrepôt**
+- **Facture multientrepôt**
 
-- **Facture unientrepot** : ouvre [Facture unientrepot](/modules/facturation/facture-unientrepot).
-- **Facture multientrepot** : ouvre [Facture multientrepot](/modules/facturation/facture-multientrepot).
+Pour une **facture service**, passez par l’onglet [Facture service](/modules/facturation/facture-service) ou le bouton correspondant dans [Factures](/modules/facturation/factures).

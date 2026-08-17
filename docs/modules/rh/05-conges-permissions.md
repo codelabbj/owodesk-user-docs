@@ -1,20 +1,22 @@
 ---
-sidebar_label: Conges et permissions
-sidebar_position: 6
+sidebar_label: Congés et permissions
+sidebar_position: 8
 ---
 
-# Conges et permissions
+# Congés et permissions
 
-Onglet **Conges/Permissions** (`/app/hr/leave`). Demandes de conges, permissions et calendrier des jours feries.
+Onglet **Congés/Permissions** (`/app/hr/leave`). Demandes de congés, permissions et calendrier des jours fériés.
 
 Managers : lien **File d'approbation** vers `/app/hr/leave/approvals`.
 
+Depuis une [fiche employé](/modules/rh/employes), **Voir les congés** ouvre cet écran **filtré sur cet employé** (`?employee=`).
+
 Deux sous-onglets sur cette page :
 
-| Sous-onglet | Role |
+| Sous-onglet | Rôle |
 |-------------|------|
-| **Demandes** | Creer et suivre les demandes |
-| **Jours feries** | Calendrier organisation (managers : edition) |
+| **Demandes** | Créer et suivre les demandes |
+| **Jours fériés** | Calendrier organisation (managers : édition) |
 
 ---
 
@@ -22,71 +24,69 @@ Deux sous-onglets sur cette page :
 
 ### Filtre
 
-**Afficher** : Toutes les demandes, Permissions uniquement, ou Conges uniquement.
+**Afficher** : Toutes les demandes, Permissions uniquement, ou Congés uniquement.
 
 ### Nouvelle demande
 
-Bouton **Nouvelle demande**. Bascule **Conge** ou **Permission**.
+Bouton **Nouvelle demande**. Bascule **Congé** ou **Permission**.
 
-#### Conge
+#### Congé
 
 | Champ | Description |
 |-------|-------------|
-| **Employe** | Managers uniquement : pour qui est la demande |
-| **Type** | Annuel, Maladie, Sans solde, Autre |
-| **Date de debut / fin** | Periode |
+| **Employé** | Managers uniquement : pour qui est la demande |
+| **Type** | Congé annuel, Maladie, Sans solde, Autre |
+| **Date de début / fin** | Période |
 | **Motif** | Optionnel |
 
-Pour un conge **annuel** : banniere **Solde annuel restant** (jours).
+Pour un congé **annuel** : bannière **Solde annuel restant** (jours).
 
 #### Permission
 
 | Champ | Description |
 |-------|-------------|
-| **Dates** | Jour(s) concernes |
-| **Heure debut / fin** | Creneau horaire |
-| **Paye (conges)** | Case a cocher |
+| **Dates** | Jour(s) concernés |
+| **Heure début / fin** | Créneau horaire |
+| **Payé (congés)** | Case à cocher |
 | **Motif** | Optionnel |
 
 Boutons : **Enregistrer brouillon**, **Soumettre**, **Annuler**.
 
 ### Tableau des demandes
 
-Colonnes : Employe (managers), Nature, Periode, Statut, Actions.
+Colonnes : Employé (managers), Nature, Période, Statut, Actions.
 
-**Statuts** : Brouillon, En attente, Approuve, Refuse, Annule.
+**Statuts** : Brouillon, En attente, Approuvé, Refusé, Annulé.
 
 | Action | Quand |
 |--------|-------|
-| **Detail** | Toujours |
+| **Détail** | Toujours |
 | **Soumettre** | Brouillon |
 | **Supprimer** | Brouillon |
-| **Approuver / Refuser** | En attente (managers, depuis la liste ou le detail) |
+| **Approuver / Refuser** | En attente (managers, depuis la liste ou le détail) |
 | **Annuler** | Selon statut |
 
 ---
 
-## Sous-onglet Jours feries
+## Sous-onglet Jours fériés
 
-Selecteur **Annee** (annee precedente, courante, suivante).
+Sélecteur **Année** (année précédente, courante, suivante).
 
-Managers : formulaire **Date** + **Libelle** + bouton **Ajouter**.
+Managers : formulaire **Date** + **Libellé** + bouton **Ajouter**.
 
-Liste des jours feries avec suppression possible (managers).
+Liste des jours fériés avec suppression possible (managers).
 
-Ces dates sont exclues des jours ouvres (presence, conges, permissions).
+Ces dates sont exclues des jours ouvrés ([Pointage](/modules/rh/presence), congés, permissions).
 
 ---
 
 ## File d'approbation
 
-Page `/app/hr/leave/approvals` (managers et admins RH uniquement).
-
-Deux onglets :
+Page `/app/hr/leave/approvals` (managers et admins RH).
 
 | Onglet | Contenu |
 |--------|---------|
-| **En attente** | Demandes a valider |
-| **Historique** | Demandes deja traitees (filtres nature et statut) |
+| **En attente** | Demandes à valider |
+| **Historique** | Demandes déjà traitées (filtres nature et statut) |
 
-Actions sur une demande en attente : **Approuver**, **Refuser** (motif optionnel), **Voir le detail**.
+Actions : **Approuver**, **Refuser** (motif optionnel), **Voir le détail**.

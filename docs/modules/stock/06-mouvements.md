@@ -1,58 +1,37 @@
 ---
 sidebar_label: Mouvements
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Mouvements
 
-Onglet **Mouvements** (`/app/inventory/movements`). Journal de toutes les entrees, sorties et ajustements de stock.
+Onglet **Mouvements** (`/app/inventory/movements`). Saisie manuelle et historique des mouvements de stock.
 
-## Nouveau mouvement
+## Enregistrer un mouvement
 
-Bouton **Enregistrer le mouvement**. Formulaire :
+Bouton **Nouveau mouvement** / titre **Enregistrer un mouvement**.
 
-| Champ | Description |
-|-------|-------------|
-| **Produit** | Article concerne |
-| **Variante** | Si le produit a des variantes |
-| **Entrepot** | Lieu du mouvement (ou source si transfert) |
-| **Entrepot destination** | Uniquement pour le type **Transfert** |
-| **Type de mouvement** | Voir tableau ci-dessous |
-| **Quantite** | Nombre d'unites |
-| **Reference** | Document ou note (optionnel) |
-| **Motif** | Obligatoire pour Perte, Dechet et Casse |
+### Types
 
-### Types de mouvement
-
-| Type | Effet |
+| Type | Usage |
 |------|-------|
-| **Entree** | Augmente le stock |
+| **Entrée** | Augmente le stock |
 | **Sortie** | Diminue le stock |
-| **Ajustement (stock cible)** | Fixe le stock a la quantite saisie |
-| **Transfert** | Sortie source + entree destination |
-| **Perte (vol / erreur)** | Sortie avec motif obligatoire |
-| **Dechet (inutilisable)** | Sortie avec motif obligatoire |
-| **Casse (endommage)** | Sortie avec motif obligatoire |
+| **Ajustement (stock cible)** | Fixe la quantité cible |
+| **Transfert** | Entre deux entrepôts |
+| **Perte (vol / erreur)** | Motif obligatoire |
+| **Déchet (inutilisable)** | Motif obligatoire |
+| **Casse (endommagé)** | Motif obligatoire |
 
-Pour les transferts entre entrepots, la page [Transferts](/modules/stock/transferts) offre un parcours dedie.
+### Saisie en lot
 
-## Filtres
+Vous pouvez saisir **plusieurs lignes** avec type, entrepôt (et destination si transfert) et référence communs :
 
-Bouton **Filtres** :
+- **Ajouter une ligne** ;
+- **Valider N mouvement(s)**.
 
-- produit ;
-- entrepot ;
-- type de mouvement ;
-- date de debut / fin.
+## Historique
 
-**Reinitialiser** pour tout effacer.
-
-## Export
-
-**Exporter CSV** : telecharge les mouvements filtres (`movements.csv`).
-
-## Liste des mouvements
-
-Colonnes : Date, Produit, Entrepot, Type, Quantite, Stock avant → apres, Reference / motif.
-
-Cliquez sur une ligne pour ouvrir le **detail** du mouvement (type, quantite, entrepots, source systeme si applicable).
+- **Afficher les filtres** ;
+- **Exporter CSV** ;
+- **Détail du mouvement** : document source éventuel (inventaire, facture, caisse, réception achat…).

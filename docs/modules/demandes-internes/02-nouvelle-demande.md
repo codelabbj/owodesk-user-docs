@@ -5,67 +5,57 @@ sidebar_position: 3
 
 # Nouvelle demande
 
-Onglet **Nouvelle demande** (`/app/requests/create`). Formulaire de creation d'une demande interne.
-
-## Acceder a la page
-
-Menu lateral **Demandes & approbations** > onglet **Nouvelle demande**.
-
-Ou bouton **Nouvelle demande** depuis la [boite de reception](/modules/demandes-internes/boite-reception).
+Onglet **Nouvelle demande** (`/app/requests/create`). Titre : **Créer une demande**.
 
 ## Champs communs
 
 | Champ | Description |
 |-------|-------------|
-| **Type de demande** | Decaissement, Fourniture, RH, Autre |
-| **Titre** | Objet court (obligatoire) |
-| **Description** | Detail libre (optionnel) |
-| **Premier destinataire** | Collaborateur qui traitera la demande (obligatoire) |
+| **Type de demande** | Décaissement (défaut), Fourniture, RH, Autre |
+| **Titre** | Obligatoire |
+| **Description** | Optionnel |
+| **Premier destinataire** | Collaborateur obligatoire (*Choisir un collaborateur*) |
 
-Apres envoi, vous etes redirige vers le detail de la demande.
-
-Bouton **Envoyer la demande** pour soumettre.
+Boutons : **Envoyer la demande** / Annuler. Après envoi → page de détail.
 
 ---
 
-## Type Decaissement
-
-Champs supplementaires :
+## Décaissement
 
 | Champ | Description |
 |-------|-------------|
-| **Montant** | Montant demande (obligatoire) |
-| **Mode de paiement** | Especes, Virement bancaire, Mobile money, Carte |
-| **Reference de paiement** | Reference optionnelle |
-| **Justificatifs** | Fichiers PDF ou image (max 20). Bouton **Ajouter un fichier** |
+| **Montant** | Obligatoire |
+| **Mode de paiement** | Espèces, Virement bancaire, Mobile money, Carte |
+| **Référence de paiement** | Optionnel |
+| **Justificatifs** | **Ajouter un fichier** (PDF, image — max 20) |
+
+À la clôture, une dépense peut être générée en [Trésorerie](/modules/tresorerie/depenses).
 
 ---
 
-## Type Fourniture
+## Fourniture
 
-Section **Articles** :
+Section **Articles** : Description, **Qté**, urgence **Normal** / **Urgent**, **Ajouter un article**.
+
+Pas de lien automatique vers le catalogue Stock.
+
+---
+
+## RH
 
 | Champ | Description |
 |-------|-------------|
-| **Description** | Libelle de l'article |
-| **Qte** | Quantite |
-| **Urgence** | Normal ou Urgent |
+| **Nature** | **Congé** / **Permission** |
+| **Date de début** | Obligatoire |
+| **Date de fin** | Optionnelle |
+| **Motif** | |
 
-Bouton **Ajouter un article** pour completer la liste. Corbeille pour retirer une ligne.
-
----
-
-## Type RH
-
-| Champ | Description |
-|-------|-------------|
-| **Nature** | Conge ou Permission |
-| **Date de debut** | Obligatoire |
-| **Date de fin** | Optionnelle (reprend la date de debut si vide) |
-| **Motif** | Texte libre |
+:::info
+Ce n’est **pas** la même chose que [Congés/Permissions](/modules/rh/conges-permissions) ni les [demandes de pièces](/modules/rh/demandes-pieces) du module RH.
+:::
 
 ---
 
-## Type Autre
+## Autre
 
-Aucun champ specifique : titre, description et destinataire suffisent.
+Titre + description + destinataire uniquement.

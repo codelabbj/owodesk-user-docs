@@ -1,62 +1,50 @@
 ---
-sidebar_label: Parametres boutique
+sidebar_label: Paramètres boutique
 sidebar_position: 5
 ---
 
-# Parametres boutique
+# Paramètres boutique
 
-Onglet **Parametres** (`/app/ecommerce/settings`). Creation et configuration de la boutique marketplace.
+Onglet **Paramètres** (`/app/ecommerce/settings`). Titre : **Paramètres de la boutique**.
 
-## En-tete
+## Liens publics
 
-**Parametres de la boutique** avec sous-titre explicatif.
-
-## Sans boutique existante
-
-Icone et invitation a remplir le formulaire ci-dessous.
-
-## Liens publics (boutique existante)
-
-| Element | Actions |
+| Élément | Actions |
 |---------|---------|
-| **Lien actuel** (Actif) | Copier, Ouvrir |
-| **Sous-domaine prevu** (Bientot) | Copier |
-| Indication slug / domaine | — |
+| **Lien actuel** (**Actif**) | Copier, Ouvrir |
+| **Sous-domaine** (**Bientôt**) | Prévu |
+| Slug / domaine | Indication sous le lien |
 
-## Identite
+## Identité
 
-| Champ | Description |
-|-------|-------------|
-| **Nom de la boutique** | Obligatoire |
-| **Description courte** | Resume affiche en marketplace |
-| **Description complete** | Texte long |
+**Nom** * · **Description courte** · **Description complète**
 
-## Contact et localisation
+## Contact & localisation
 
 | Champ | Description |
 |-------|-------------|
-| **Numero WhatsApp** | Contact clients (saisie telephone internationale) |
-| **Ville** | Localisation |
-| **Adresse complete** | Adresse postale |
-| **Position sur la carte** | Selecteur cartographique (LocationPicker) |
+| **Numéro WhatsApp** | Contact / secours (si pas de routage entrepôt) |
+| **Ville** / **Adresse** | |
+| **Position sur la carte** | Point GPS de la boutique |
 
-## WhatsApp par entrepot
+## WhatsApp par entrepôt
 
-Une carte par entrepot :
+Routage géolocalisé vers l’entrepôt le plus proche :
 
-- nom, adresse, badge **Routage actif** ou **A completer** ;
-- numero WhatsApp (PhoneInput) ;
-- carte entrepot (LocationPicker) ;
-- **Enregistrer** par carte.
+- badges **Routage actif** / **À compléter** ;
+- WhatsApp + position par entrepôt ;
+- **Enregistrer** ;
 
-Etat vide : lien vers [Entrepots](/modules/stock/entrepots).
+Si aucun entrepôt : allez dans [Entrepôts](/modules/stock/entrepots) (`/app/inventory/warehouses`).
 
 ## Visuels
 
-- **Logo** : upload, apercu, suppression ;
-- **Banniere** : upload, apercu, suppression.
+**Logo** et **Bannière** (ajouter / remplacer / supprimer).
 
-## Actions formulaire
+## Actions
 
-- **Enregistrer** ou **Creer ma boutique** ;
-- **Retour a la vue d'ensemble** (si boutique existante) vers [Vue d'ensemble](/modules/ecommerce/vue-ensemble).
+**Enregistrer** ou **Créer ma boutique** · **Retour à la vue d'ensemble**.
+
+:::info Statut Active / Inactive
+Le statut affiché sur la vue d’ensemble n’est pas un interrupteur dans cet écran Paramètres.
+:::

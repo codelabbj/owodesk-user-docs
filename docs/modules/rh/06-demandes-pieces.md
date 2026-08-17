@@ -1,57 +1,57 @@
 ---
-sidebar_label: Demandes de pieces
-sidebar_position: 7
+sidebar_label: Demandes de pièces
+sidebar_position: 9
 ---
 
-# Demandes de pieces
+# Demandes de pièces
 
-Onglet **Demandes de pieces** (`/app/hr/document-requests`). Attestations de travail ou de stage a retirer sur place (pas d'envoi par email).
+Onglet **Demandes de pièces** (`/app/hr/document-requests`). Attestations de travail ou de stage à retirer **sur place** (pas d'envoi par email).
 
 Sous-onglets selon le profil :
 
-| Sous-onglet | Qui le voit | Role |
+| Sous-onglet | Qui le voit | Rôle |
 |-------------|-------------|------|
-| **A traiter** | Managers | Demandes en attente de preparation |
-| **Historique** | Managers | Demandes deja traitees |
-| **Mes demandes** | Tous | Demandes de l'employe connecte |
+| **À traiter** | Managers | Demandes en attente de préparation |
+| **Historique** | Managers | Demandes déjà traitées |
+| **Mes demandes** | Tous | Demandes de l'employé connecté |
 
 ---
 
-## Mes demandes (employe)
+## Mes demandes (employé)
 
-Bouton **Nouvelle demande** (si aucune demande en attente du meme type).
+Bouton **Nouvelle demande** (si aucune demande en attente du même type).
 
 | Champ | Description |
 |-------|-------------|
-| **Type de piece** | Attestation de travail (salarie) ou Attestation de stage (stagiaire) |
+| **Type de pièce** | Attestation de travail (salarié) ou Attestation de stage (stagiaire) |
 | **Message** | Optionnel, pour les RH |
 
-**Statuts** : En attente, Prete au retrait, Retiree, Refusee, Annulee.
+**Statuts** : En attente, Prête au retrait, Retirée, Refusée, Annulée.
 
-L'employe peut **Annuler** une demande encore en attente.
+L'employé peut **Annuler** une demande encore en attente.
 
 ---
 
-## A traiter (managers)
+## À traiter (managers)
 
-Filtre par **type de piece**.
-
-Pour chaque demande :
+Filtre par **type de pièce**.
 
 | Action | Effet |
 |--------|-------|
-| **Marquer prete** | La piece est prete au retrait |
+| **Marquer prête** | La pièce est prête au retrait |
 | **Refuser** | Motif de refus |
 
-Quand le statut est **Prete au retrait** :
+Quand le statut est **Prête au retrait** :
 
 | Action | Effet |
 |--------|-------|
-| **PDF** | Telecharger l'attestation generee |
-| **Remise effectuee** | Confirmer le retrait en main propre |
+| **PDF** | Télécharger l'attestation générée |
+| **Remise effectuée** | Confirmer le retrait en main propre |
 
 ## Historique (managers)
 
-Filtres **type** et **statut**. Consultation et telechargement PDF des attestations deja remises.
+Filtres **type** et **statut**. Consultation et téléchargement PDF des attestations déjà remises.
 
-La route `/app/hr/document-requests/approvals` redirige vers cette page avec l'onglet **A traiter**.
+La route `/app/hr/document-requests/approvals` redirige vers cette page avec l'onglet **À traiter**.
+
+Les formats d'attestation se configurent aussi depuis [Documents](/modules/rh/documents) (**Formats d'attestation**).

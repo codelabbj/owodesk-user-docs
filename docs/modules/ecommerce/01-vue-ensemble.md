@@ -9,60 +9,45 @@ Onglet **Vue d'ensemble** (`/app/ecommerce/my-shop`). Tableau de bord de votre b
 
 ## Sans boutique
 
-Message **Vous n'avez pas encore de boutique** et bouton **Creer ma boutique** vers [Parametres](/modules/ecommerce/parametres-boutique).
+Message **Vous n'avez pas encore de boutique** et bouton **Créer ma boutique** → [Paramètres](/modules/ecommerce/parametres-boutique).
 
-## Banniere boutique
+## Bannière boutique
 
-- Image de couverture (ou placeholder) ;
-- ville, nom, logo, description courte ;
-- slug public (`/slug`) ;
-- **Voir sur la marketplace** (lien externe) ;
-- **WhatsApp** (si numero configure).
+- Couverture, ville, nom, logo, description courte, slug public ;
+- **Voir sur la marketplace** ;
+- **WhatsApp** (si numéro configuré).
 
-## Indicateurs (4 cartes)
+## Indicateurs
 
 | Indicateur | Signification |
 |------------|---------------|
 | **Produits** | Total catalogue |
-| **Publies** | Visibles en ligne |
-| **Intentions** | Commandes initiees en attente |
-| **Statut** | Active ou Inactive |
+| **Publiés** | Visibles en ligne |
+| **Intentions** | Commandes initiées en attente |
+| **Statut** | **Active** / **Inactive** (lecture seule ici) |
 
-## Checklist de mise en route
+## Checklist **Complétez votre boutique**
 
-Si la boutique est incomplete : barre de progression et taches cliquables :
+Progression `terminé(s)` et tâches cliquables, notamment :
 
-- Ajouter un logo ;
-- Ajouter une banniere ;
+- Ajouter un logo / une bannière ;
 - Configurer WhatsApp ;
-- Definir l'emplacement sur la carte ;
-- Renseigner la description courte ;
-- Publier un produit.
+- **Indiquer l'emplacement sur la carte** ;
+- **Rédiger une description courte** ;
+- Publier au moins un produit.
 
-## Alertes stock
+## Alertes & brouillons
 
-Liste des produits en **rupture** ou **stock faible** avec lien vers [Produits](/modules/ecommerce/produits).
-
-## Brouillons a publier
-
-Produits non publies avec lien vers [Produits](/modules/ecommerce/produits).
+- **Alertes stock** (rupture / stock faible) → [Produits](/modules/ecommerce/produits) ;
+- **Brouillons à publier** + CTA **Publier**.
 
 ## Partage rapide
 
-Boutons de copie :
+Lien boutique · Sous-domaine (**Bientôt**) · WhatsApp — **Copier** / **Copié**.
 
-- lien boutique ;
-- sous-domaine (affiche **bientot** si non disponible) ;
-- lien WhatsApp.
+## Autres blocs
 
-## Dernieres commandes initiees
-
-Liste client, produit, date, lien WhatsApp. Bouton **Voir tout** vers [Commandes initiees](/modules/ecommerce/commandes-initiees).
-
-## A propos et localisation
-
-Description, adresse, lien **Itineraire Google Maps**.
-
-## Derniers produits publies
-
-Grille image, nom, prix. Etat vide avec **Ajouter un produit** vers [Produits](/modules/ecommerce/produits).
+- **Dernières commandes initiées** · **Voir tout** ;
+- **À propos** / **Localisation** / **Itinéraire Google Maps** ;
+- **Derniers produits publiés** · **Gérer les produits** ;
+- État vide : **Ajouter un produit** ouvre l’onglet [Produits](/modules/ecommerce/produits) (pas un formulaire de création inline).

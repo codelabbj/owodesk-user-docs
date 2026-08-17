@@ -5,132 +5,99 @@ sidebar_position: 3
 
 # Factures
 
-Onglet **Factures** (`/app/billing/invoice-list`). Liste, recherche et acces au detail de chaque facture.
+Onglet **Factures** (`/app/billing/invoice-list`). Liste, recherche et détail de chaque facture.
 
-## Acceder a la page
+## Accéder à la page
 
-Menu lateral **Facturation** > onglet **Factures**.
+Menu latéral **Facturation** → **Factures**.
 
 ## Indicateurs
 
 | Indicateur | Signification |
 |------------|---------------|
-| **Total facture** | Somme des montants des factures affichees (selon filtre actif) |
-| **Total encaisse** | Montant deja paye sur ces factures |
-| **En attente** | Reste a encaisser |
+| **Total facturé** | Somme des montants (selon filtre) |
+| **Total encaissé** | Déjà payé |
+| **En attente** | Reste à encaisser |
 
 ## Filtres rapides
 
-Chips en haut de la liste :
-
-| Filtre | Affiche |
-|--------|---------|
-| **Toutes** | Toutes les factures |
-| **Aujourd'hui** | Factures emises aujourd'hui |
-| **Impayees** | Etat de paiement Non payee ou Partiel |
-| **En retard** | Impayees depuis plus de 30 jours |
-| **Payees** | Entierement reglees |
+**Toutes** · **Aujourd'hui** · **Impayées** · **En retard** · **Payées**
 
 ## Recherche
 
-Champ **Rechercher une facture ou un client** : filtre par numero de facture ou nom du client.
+Champ *Rechercher une facture ou un client…* : numéro de facture ou **nom du client** (particulier, entreprise ou libellé affiché).
 
 ## Carte facture
 
-Chaque carte affiche :
+- **Client** (nom affiché correctement pour particuliers et entreprises) ;
+- **Numéro** ;
+- Badges : **FP**, **AVOIR**, **EXPORT**, **AV. EXPORT**, **Multientrepôt** ;
+- **Montant** ;
+- Paiement : **Payée** / **Partiel** / **Non payée** ;
+- Statut document : **Brouillon**, **En attente DGI**, **Finalisée**, **Normalisée**, **Échec DGI**, **Annulée** ;
+- Date d’émission.
 
-- **Client** ;
-- **Numero** de facture ;
-- **Badges** eventuels :
-  - **FP** : facture pro generee depuis cette facture ;
-  - **AVOIR** / **EXPORT** / **AV. EXPORT** : type de document ;
-  - **Multientrepot** : sortie de stock sur plusieurs entrepots ;
-- **Montant** total ;
-- **Etat de paiement** : Payee, Partiel, Non payee ;
-- **Statut document** : Brouillon, En attente DGI, Finalisee, Normalisee, Echec DGI, Annulee ;
-- **Date** d'emission.
+## Créer une facture
 
-Cliquez sur une carte pour ouvrir le detail.
-
-## Creer une facture
-
-Boutons en haut a droite :
-
-- **Unientrepot** → [Facture unientrepot](/modules/facturation/facture-unientrepot)
-- **Multientrepot** → [Facture multientrepot](/modules/facturation/facture-multientrepot)
+- **Unientrepôt** → [Facture unientrepôt](/modules/facturation/facture-unientrepot)
+- **Multientrepôt** → [Facture multientrepôt](/modules/facturation/facture-multientrepot)
+- **Facture service** → [Facture service](/modules/facturation/facture-service)
 
 ---
 
-## Detail d'une facture
+## Détail d'une facture
 
-Page `/app/billing/invoices/{id}`, accessible en cliquant sur une facture dans la liste.
+Page `/app/billing/invoices/{id}`.
 
-### En-tete
+### Aperçu
 
-- Bouton **Retour** vers la liste ;
-- Badges : type de document (AVOIR, EXPORT…), Multientrepot, statut (Brouillon, Normalisee, etc.).
+À gauche : aperçu papier (entreprise, **client**, lignes, totaux, TVA). Le nom du client (y compris **entreprise**) apparaît aussi sur le PDF.
 
-### Apercu document
+### Certification fiscale
 
-A gauche : apercu imprimable de la facture (en-tete entreprise, client, lignes, totaux, ventilation TVA).
+- **Certification en cours…** / **En attente DGI** ;
+- **Échec DGI** + **Réessayer la certification** ;
+- Succès : **Facture certifiée (e-MECeF)** (QR, réf. fiscale, signature, compteur, NIM).
 
-### Panneau de controle (droite)
+La config se fait dans [Fiscal / e-facture](/modules/facturation/fiscal-efacture) (**Paramètres → Facturation**).
 
-#### Certification fiscale
+### Si brouillon — Finaliser
 
-Selon le statut :
+Selon le mode organisation :
 
-- **En attente DGI** : certification en cours (rafraichissement automatique).
-- **Echec DGI** : message d'erreur + bouton **Reessayer** la certification normalisee.
-- **Normalisee** : QR code MECeF, reference fiscale, signature, compteur, date de certification.
+| Mode | Boutons |
+|------|---------|
+| **Les deux** | Finalisation **Simple** et **Normalisée** |
+| **Simple uniquement** | **Simple** |
+| **Normalisée uniquement** | **Normalisée** |
 
-#### Si la facture est en brouillon
+**Créer une facture pro à partir de cette facture** (date d’expiration optionnelle).
 
-Message invitant a finaliser. Boutons selon le mode de facturation de l'organisation :
-
-| Mode org. | Boutons disponibles |
-|-----------|---------------------|
-| **Les deux** | **Finaliser simple** et **Finaliser normalisee** |
-| **Simple uniquement** | **Finaliser simple** |
-| **Normalisee uniquement** | **Finaliser normalisee** |
-
-Si la configuration fiscale est incomplete, une fenetre propose d'aller vers [Fiscal / e-facture](/modules/facturation/fiscal-efacture).
-
-**Facture pro** (si pas encore creee) :
-
-- Bouton **Creer une facture pro a partir de cette facture** ;
-- Saisie optionnelle de la **date d'expiration** ;
-- Confirmation **Creer la facture pro**.
-
-Si une facture pro existe deja : lien **Voir la facture pro**.
-
-#### Si la facture est finalisee
-
-Actions disponibles :
+### Si finalisée / normalisée
 
 | Action | Description |
 |--------|-------------|
-| **Imprimer** | Ouvre la fenetre d'impression |
-| **Telecharger PDF** | Export PDF de la facture |
-| **Generer un Avoir** | Ouvre une nouvelle facture pre-remplie (type Avoir) — disponible si statut Finalisee ou Normalisee |
+| **Imprimer** | Impression navigateur |
+| **Télécharger PDF** | Export PDF |
+| **Générer un Avoir** | Nouvelle facture préremplie (type avoir) |
 
-#### Cachet / signature
+:::info E-mail
+Il n’y a pas de bouton **Envoyer par e-mail** sur cet écran pour l’instant. Utilisez PDF ou impression.
+:::
 
-- Si aucune image : **Choisir une image** (upload sur la facture).
-- Si image presente : apercu + bouton supprimer.
-- Sinon, le cachet de l'organisation (parametres) peut s'afficher.
+### Cachet / signature
 
-#### Enregistrer un paiement
+**Choisir une image** ou supprimer ; sinon cachet organisation.
 
-Disponible si la facture n'est pas en brouillon, en attente DGI, en echec DGI ou annulee, et qu'elle n'est pas entierement payee.
+### Encaisser
 
-1. Saisissez le **montant** (pre-rempli avec le solde restant).
-2. Choisissez le **mode** : Especes, Carte bancaire, Mobile Money, Virement bancaire.
-3. Cliquez **Confirmer le paiement**.
+Si la facture n’est pas soldée (et pas brouillon / annulation / échec bloquant) :
 
-- Montant >= solde → paiement total, facture **Payee**.
-- Montant < solde → paiement partiel, etat **Partiel**.
+1. **Montant** (prérempli avec le solde) ;
+2. **Mode** : Espèces, Carte, Mobile Money, Virement, Chèque ;
+3. **Référence de paiement** (obligatoire pour un chèque) ;
+4. **Confirmer le paiement**.
 
-#### Nouvelle vente
+Facture service : lien éventuel vers le **contrat** de prestation.
 
-Bouton **Nouvelle vente** : retour vers la creation de facture unientrepot.
+**Nouvelle vente** : retour vers la création unientrepôt.

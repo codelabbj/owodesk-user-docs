@@ -5,103 +5,106 @@ sidebar_position: 2
 
 # Encaissement
 
-Onglet **Encaissement** (`/app/pos/checkout`). Caisse principale : scan, panier et paiement.
+Onglet **Encaissement** (`/app/pos/checkout`). Écran principal de vente au comptoir.
 
-## Session de caisse obligatoire
+## Session obligatoire
 
-Sans session ouverte, l'ecran affiche **Ouvrez une session pour commencer a vendre** avec le bouton **Ouvrir la caisse**.
+Sans session ouverte :
 
-Une fois la session active, une barre indique :
+- bandeau **Caisse fermée** / *Ouvrez une session pour commencer à vendre* ;
+- bouton **Ouvrir la caisse**.
 
-- nom de l'entrepot / caisse (badge **principal** si applicable) ;
-- heure d'ouverture ;
-- **CA session** et **nombre de ventes** ;
-- bouton **Cloturer** (modale : cash compte, ecart, confirmation).
+### Ouvrir depuis Encaissement
 
-L'ouverture et la cloture sont aussi disponibles sur [Sessions de caisse](/modules/pos/sessions-caisse).
-
-## Panneau gauche — Produits
-
-### Indicateurs du jour
-
-| Indicateur | Signification |
-|------------|---------------|
-| **Encaisse** | Total encaisse aujourd'hui |
-| **Ventes** | Nombre de ventes du jour |
-| **En cours** | Ventes en brouillon |
-
-### Ajouter des articles
-
-Champ unifie **scan + recherche** :
-
-- scan code-barres ou SKU (douchette) ;
-- recherche par nom de produit.
-
-Grille de produits cliquables (nom, SKU, prix). Badge quantite si deja dans le panier.
-
-Produits avec **variantes** : modale de choix d'option (nom, SKU, prix).
-
-### Ventes recentes
-
-Liste des dernieres ventes avec numero, statut, client, total.
-
-- Cliquez pour deployer les **lignes** (produit, variante, entrepot, quantite, prix).
-- Badge **Multientrepot** si la vente sort de plusieurs entrepots.
-- Bouton **Poursuivre** sur les brouillons.
-- **Voir plus** / **Voir moins** si plus de 5 ventes.
-
-Statuts : Brouillon, Finalisee, Annulee.
-
-## Panneau droit — Panier
-
-### Configuration
+Modale **Ouvrir la caisse** :
 
 | Champ | Description |
 |-------|-------------|
-| **Entrepot** | Entrepot de sortie stock (entrepots autorises pour les ventes) |
-| **Client** | Recherche dans le CRM, **Client anonyme** par defaut |
+| **Entrepôt / Caisse** | Obligatoire (— Choisir —) |
+| **Fond de caisse initial** | Montant dans la devise de l’organisation |
 
-Client :
+Confirmation : **Ouvrir la caisse ?**
 
-- recherche par nom dans les contacts CRM ;
-- bouton **+** pour **creer un client** rapide (prenom, nom, telephone) ;
-- affichage compact du client selectionne avec bouton effacer.
+:::info
+Cette ouverture rapide n’a **pas** de champ Notes (contrairement à l’onglet [Sessions](/modules/pos/sessions-caisse)).
+:::
 
-### Lignes du panier
+### Barre de session
 
-Pour chaque article :
+Une fois ouverte : nom de l’entrepôt (badge **principal**), caissier, heure, CA + nombre de ventes, bouton **Clôturer**.
 
-- nom et variante ;
-- selecteur **entrepot** (si plusieurs entrepots) ;
-- alerte **stock insuffisant** si applicable ;
-- boutons **− / +** quantite, prix ligne, corbeille.
+L’entrepôt du panier est **verrouillé** sur celui de la session.
 
-Bouton **Vider** le panier.
+### Clôture depuis Encaissement (raccourci)
 
-Message **Multientrepot** si les lignes proviennent de plusieurs entrepots.
+Résumé : **CA total**, **Espèces encaissées**, **Fond initial**, **Cash théorique** ; saisie **Cash compté dans la caisse** ; écart (**Caisse équilibrée** / excédent / manquant).
 
-### Paiement
+Pour une clôture complète (répartition des modes, notes, email, Z détaillé), utilisez [Sessions de caisse](/modules/pos/sessions-caisse).
 
-Modes : **Especes**, **Carte**, **Mobile Money**.
+---
 
-**Especes** :
+## Indicateurs
 
-- **Montant recu** ;
-- calcul automatique du **Rendu** ou montant **Insuffisant**.
+**Encaissé** · **Ventes** · **En cours**
 
-**Mobile Money** :
+## Ajouter des produits
 
-- operateur : Wave, Orange Money, MTN Money, Moov Money ;
-- **Reference** (optionnelle).
+Champ *Ajouter un produit (scan ou recherche)...* :
 
-**Carte** :
+- recherche / filtre de la grille ;
+- scan code-barres ou SKU ;
+- **OwoScan** (douchette / WebSocket) : ajoute au panier si le code est trouvé.
 
-- message de validation TPE avant confirmation.
+Grille cliquable : nom, options, SKU, prix. Variantes : modale **Choisissez une option**.
 
-### Encaisser
+### Ventes récentes
 
-Bouton **Encaisser — [montant] XOF** (desactive si panier vide, session fermee ou stock insuffisant).
+Liste : numéro, badge **Multientrepôt**, statut (**Brouillon** / **Finalisée** / **Annulée** / **Payée**), client, total. **Poursuivre** un brouillon.
 
-Apres encaissement : **modale ticket** (impression / apercu du recu).
+---
 
-Le stock est decremente a la finalisation de la vente.
+## Panier
+
+- Client : **Client anonyme** ou sélection ; **Nouveau client** (Prénom *, Nom, Téléphone optionnel) ;
+- **Vider** le panier ;
+- Lignes : quantité −/+, **Remise ligne** (%), prix net, supprimer ;
+- Alerte **Stock insuffisant (N dispo.)** si besoin.
+
+### Remises
+
+| Type | Description |
+|------|-------------|
+| **Remise ligne** | % sur une ligne |
+| **Remise sur le ticket** | % sur le ticket |
+| **Remise grossiste** | Montant fixe |
+
+Si la remise dépasse le seuil organisation (souvent **10 %**), une **Validation manager** est demandée (email + mot de passe → **Valider la remise** / **Faire valider**).
+
+Totaux : **Sous-total** puis **Total**.
+
+---
+
+## Paiement
+
+| Mode | Particularités |
+|------|----------------|
+| **Espèces** | **Montant reçu**, **Rendu** / **Insuffisant**, référence optionnelle |
+| **Carte** | Valider sur le TPE puis confirmer ; réf. optionnelle |
+| **Mobile Money** | **Wave**, **Orange Money**, **MTN Money**, **Moov Money** + réf. optionnelle |
+| **Chèque** | **Référence obligatoire** (min. 3 caractères) |
+
+Bouton **Encaisser — {montant}** (ou messages *Panier vide* / *Ouvrez la caisse d'abord*).
+
+Confirmation : **Confirmer l'encaissement**.
+
+Le stock est décrémenté à la finalisation de la vente.
+
+---
+
+## Ticket après encaissement
+
+Modale **Vente encaissée** :
+
+- normalisation MECeF automatique selon le mode org (**Normalisation MECeF en cours…**, **Normalisé**, échec + **Retenter**, ou **Ticket non normalisé**) ;
+- ticket : éventuelle bannière **TICKET NORMALISÉ — MECeF**, réf. fiscale, n° transaction, QR ;
+- **Passer** / **Imprimer** (format ticket ~80 mm).

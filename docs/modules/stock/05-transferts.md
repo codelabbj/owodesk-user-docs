@@ -1,42 +1,35 @@
 ---
 sidebar_label: Transferts
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Transferts
 
-Onglet **Transferts** (`/app/inventory/transfers`). Deplacez du stock d'un entrepot vers un autre.
+Onglet **Transferts** (`/app/inventory/transfers`). Titre : **Transferts inter-entrepôts**.
 
-Deux modes via les onglets internes :
+:::info Bureau
+Cet écran est prévu pour un usage **bureau** (pas pleinement mobile).
+:::
 
-| Mode | Usage |
-|------|-------|
-| **Un produit** | Transfert unitaire |
-| **Transfert en lot** | Plusieurs produits en une operation |
+## Modes
 
-## Transfert — un produit
+- **Un produit**
+- **Plusieurs produits** (plusieurs lignes dans le même transfert)
+
+## Champs
 
 | Champ | Description |
 |-------|-------------|
-| **Entrepot source** | D'ou part le stock |
-| **Entrepot destination** | Ou arrive le stock |
-| **Produit** | Article a transferer |
-| **Variante** | Si applicable |
-| **Quantite** | Nombre d'unites (stock disponible affiche a la source) |
-| **Reference** | Libelle optionnel (ex. BL-2024-001) |
+| Entrepôt **source** / **destination** | Obligatoires |
+| **Produit** / **Variante** | |
+| **Quantité** | Avec indication **Disponible à la source** |
+| **Référence** | Optionnel |
 
-Bouton pour lancer le transfert.
+## Validation
 
-## Transfert en lot
-
-Meme entrepots source et destination pour toutes les lignes.
-
-Chaque ligne : **produit**, **variante**, **quantite**. Bouton **Ajouter une ligne** pour en ajouter d'autres.
-
-**Reference du lot** : libelle commun a tous les mouvements (genere automatiquement si vide).
+- **Valider le transfert** ou **Valider N transfert(s)** ;
+- **Ajouter une ligne** en mode plusieurs produits.
 
 ## Historique
 
-Tableau des **50 derniers transferts** : date, produit, source → destination, quantite, reference.
-
-Les transferts sont aussi visibles dans [Mouvements](/modules/stock/mouvements) (type Transfert).
+Section **Derniers transferts**.

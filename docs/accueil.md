@@ -21,16 +21,17 @@ Cette documentation vous guide pas a pas dans l'utilisation de chaque module.
 ## Modules disponibles
 
 - **[Tableau de bord](/modules/tableau-de-bord)** -- Indicateurs cles de votre activite
-- **[CRM](/modules/crm)** -- Contacts, entreprises, pipeline, vue 360
-- **[Facturation](/modules/facturation)** -- Factures, devis, paiements, certification fiscale
-- **[Stock](/modules/stock)** -- Produits, entrepots, mouvements, inventaires, achats
-- **[Comptabilite](/modules/comptabilite)** -- Tresorerie, revenus, depenses, dettes, rapports
-- **[Ressources humaines](/modules/rh)** -- Employes, paie, presence, conges, documents
-- **[Point de vente](/modules/pos)** -- Ventes au comptoir, caisse, ticket Z
-- **[E-Commerce](/modules/ecommerce)** -- Marketplace, produits, commandes initiees
-- **[Projets](/modules/projets)** -- Taches Kanban, collaboration
-- **[Demandes & approbations](/modules/demandes-internes)** -- Decaissements, fournitures, RH, circuit de validation
-- **[Assistant Owo](/modules/assistant-owo)** -- Assistant IA intelligent
+- **[CRM](/modules/crm)** -- Entreprises, contacts, pipelines, fiches 360
+- **[Facturation](/modules/facturation)** -- Factures, pro, service, e-MECeF
+- **[Stock](/modules/stock)** -- Produits, entrepots, mouvements, achats
+- **[Trésorerie](/modules/tresorerie)** -- Caisse, revenus, dépenses, impayés
+- **[Comptabilité](/modules/comptabilite)** -- SYSCOHADA, écritures, balance, FEC
+- **[Ressources humaines](/modules/rh)** -- Employés, paie, pointage, congés, rapports
+- **[Point de vente](/modules/pos)** -- Caisse, sessions, tickets MECeF
+- **[E-Commerce](/modules/ecommerce)** -- Marketplace, produits, commandes initiées
+- **[Projets](/modules/projets)** -- Tâches Kanban, récurrence, rapport du jour
+- **[Demandes & approbations](/modules/demandes-internes)** -- Décaissements, fournitures, circuit de validation
+- **[Assistant Owo](/modules/assistant-owo)** -- Questions en langage courant (bouton Owo)
 
 ## Administration
 

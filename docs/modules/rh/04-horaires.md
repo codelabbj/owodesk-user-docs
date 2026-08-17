@@ -1,13 +1,22 @@
 ---
 sidebar_label: Horaires
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Horaires
 
-Onglet **Horaires** (`/app/hr/work-schedule`). Planning de travail par defaut de l'organisation.
+Onglet **Horaires** (`/app/hr/work-schedule`). Titre : **Horaires de travail**.
 
-## Parametres generaux
+Définit le planning par défaut de l’organisation (et sert de base aux retards / absences).
+
+## Types de planning
+
+Vous pouvez configurer un planning :
+
+- **Hebdomadaire** — même grille chaque semaine ;
+- **Cycle de rotation** — enchaînement de jours selon un cycle défini.
+
+## Paramètres généraux
 
 | Champ | Description |
 |-------|-------------|
@@ -16,28 +25,29 @@ Onglet **Horaires** (`/app/hr/work-schedule`). Planning de travail par defaut de
 
 Bouton **Enregistrer** pour sauvegarder.
 
-## Synthese
+## Synthèse
 
-- **Jours ouvres / semaine** ;
-- **Heures hebdomadaires** (calculees selon creneaux et pauses).
+- **Jours ouvrés / semaine** ;
+- **Heures hebdomadaires** (calculées selon créneaux et pauses).
 
-## Grille hebdomadaire
+## Grille (jours)
 
-Pour chaque jour (lundi a dimanche) :
+Pour chaque jour du planning :
 
 | Colonne | Description |
 |---------|-------------|
-| **Ouvre** | Case a cocher jour ouvre ou non |
-| **Debut** | Heure d'arrivee |
-| **Fin** | Heure de depart |
-| **Pause (min)** | Duree de pause deduite |
+| **Ouvre** | Jour ouvré ou non |
+| **Début** | Heure d’arrivée |
+| **Fin** | Heure de départ |
+| **Pause (min)** | Durée de pause déduite |
+| Grâce / retard | Seuil éventuel avant de compter un retard |
 
-Les champs horaires sont desactives si le jour n'est pas ouvre.
+Les champs horaires sont désactivés si le jour n’est pas ouvré.
 
-## Jours feries
+## Jours fériés
 
-Banniere avec lien **Gerer les jours feries** vers [Conges/Permissions](/modules/rh/conges-permissions) (sous-onglet Jours feries).
+Bannière avec lien vers [Congés/Permissions](/modules/rh/conges-permissions) → sous-onglet **Jours fériés**.
 
-Les retards et absences en [presence](/modules/rh/presence) s'appuient sur ce planning et le calendrier des jours feries.
+Les retards et absences en [Pointage](/modules/rh/presence) s’appuient sur ce planning et le calendrier des jours fériés.
 
-Chaque employe peut suivre ce planning ou definir un [horaire personnalise](/modules/rh/employes) sur sa fiche.
+Chaque employé peut suivre ce planning **entreprise** ou un [horaire personnalisé](/modules/rh/employes) sur sa fiche.

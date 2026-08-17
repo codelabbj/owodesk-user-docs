@@ -1,93 +1,71 @@
 ---
 sidebar_label: Fiscal / e-facture
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Fiscal / e-facture
 
-Onglet **Fiscal / e-facture** (`/app/billing/fiscal`). Configuration du mode de facturation et des identifiants pour la certification normalisee (e-MECeF Benin).
+La configuration fiscale se fait dans **Paramètres → Facturation** (`/app/settings?tab=billing`).
 
-## Acceder a la page
+:::info Ancien onglet
+L’ancien onglet **Fiscal / e-facture** du module Facturation (`/app/billing/fiscal`) **redirige** vers ces paramètres. Ce n’est plus un écran séparé dans le module.
+:::
 
-Menu lateral **Facturation** > onglet **Fiscal / e-facture**.
+## Accéder à la page
+
+1. Menu **Paramètres** (ou engrenage) ;
+2. Onglet / section **Facturation**.
+
+Vous y trouvez : mode de facturation, option TVA sur les lignes, pied de page / branding, et le panneau **Configuration e-MECeF / DGI**.
 
 ---
 
 ## Mode de facturation
 
-Liste deroulante (enregistrement automatique a la modification) :
-
 | Mode | Effet |
 |------|-------|
 | **Facture simple uniquement** | Finalisation sans certification DGI |
-| **Facture normalisee uniquement** | Certification obligatoire a chaque finalisation |
-| **Les deux** | Choix Simple ou Normalisee au moment de finaliser |
+| **Facture normalisée uniquement** | Certification obligatoire |
+| **Les deux** | Choix Simple ou Normalisée à la finalisation |
 
-Si le mode est **simple uniquement**, le panneau de configuration fiscale affiche un message informatif : pas de parametres e-MECeF requis.
+En mode **simple uniquement**, aucune config e-MECeF n’est requise.
 
 ---
 
-## Configuration fiscale
+## Configuration e-MECeF / DGI
 
-Visible si le mode est **normalisee** ou **les deux**.
+Visible si le mode est **normalisée** ou **les deux**.
 
-### Adaptateur fiscal
+### Adaptateur
 
 | Adaptateur | Description |
 |------------|-------------|
-| **Aucun** | Pas de certification (alerte si mode normalise) |
-| **e-MECeF (API directe)** | Token, NIM, IFU |
-| **e-MECeF via MCF (agent local)** | Terminal MCF, ID operateur, nom operateur |
-
-Le choix de l'adaptateur determine les champs a renseigner.
-
-### Champs e-MECeF (API directe)
-
-| Champ | Description |
-|-------|-------------|
-| **Token** | Jeton d'API MECeF (mot de passe masque) |
-| **NIM** | Numero d'identification du module de facturation |
-| **IFU** | Identifiant fiscal du vendeur (pre-rempli depuis les parametres entreprise si disponible) |
-
-### Champs MCF (agent local)
-
-| Champ | Description |
-|-------|-------------|
-| **Terminal** | Selection d'un terminal MCF enregistre |
-| **ID operateur** | Identifiant operateur |
-| **Nom operateur** | Nom affiche (defaut : nom de l'entreprise) |
-
-### Gestion des terminaux MCF
-
-Panneau dedie pour l'adaptateur MCF :
-
-- **Creer un terminal** : saisir un nom (ex. Caisse 1), obtenir un **token de jumelage** pour l'agent ;
-- **Selectionner** un terminal existant (indicateur en ligne / hors ligne) ;
-- **Tester** la connexion d'un terminal.
+| **Aucun** | Pas de certification |
+| **e-MECeF — DGI Bénin** | API directe (token, NIM, IFU) |
+| **e-MECeF — Machine MCF** | Agent local / terminal MCF |
 
 ### Actions
 
 | Bouton | Action |
 |--------|--------|
-| **Enregistrer** | Sauvegarde l'adaptateur et les identifiants |
-| **Verifier la connexion** | Teste la liaison avec l'administration fiscale (actif si configuration complete) |
+| **Enregistrer la configuration** | Sauvegarde adaptateur et identifiants |
+| **Tester la connexion e-MECeF** | Vérifie que le serveur / l’agent répond |
 
-Un message de succes confirme la verification.
+Pour l’API DGI : **Token API DGI (e-MECeF)**, **NIM**, **IFU** (souvent repris des paramètres entreprise).
+
+Pour la machine MCF : sélection / création de **terminal**, opérateur, jumelage agent.
 
 ---
 
 ## Lien avec les factures
 
-1. Configurez ici le mode et les identifiants.
-2. Creez une facture en brouillon ([unientrepot](/modules/facturation/facture-unientrepot) ou [multientrepot](/modules/facturation/facture-multientrepot)).
-3. Depuis le [detail](/modules/facturation/factures#detail-dune-facture), cliquez **Finaliser normalisee**.
-4. Statuts possibles :
-   - **En attente DGI** : certification en cours ;
-   - **Normalisee** : QR code et reference MECeF affiches ;
-   - **Echec DGI** : erreur + bouton **Reessayer**.
+1. Configurez ici mode + adaptateur ;
+2. Créez un brouillon ([unientrepôt](/modules/facturation/facture-unientrepot), [multi](/modules/facturation/facture-multientrepot) ou [service](/modules/facturation/facture-service)) ;
+3. Sur le [détail](/modules/facturation/factures#detail-dune-facture), finalisez en **Normalisée** ;
+4. Statuts : **En attente DGI** → **Normalisée** (QR, réf. MECeF) ou **Échec DGI** + **Réessayer la certification**.
 
-Si la configuration est incomplete au moment de finaliser, une fenetre propose d'ouvrir cette page.
+Si la config est incomplete, l’app propose d’ouvrir **Paramètres → Facturation**.
 
 ## IFU vendeur
 
-L'IFU doit aussi etre renseigne dans **Parametres** > **Entreprise** (section Fiscal). Il est reutilise automatiquement sur cette page.
+Renseignez aussi l’IFU dans **Paramètres → Entreprise** (section fiscale). Il est réutilisé pour e-MECeF.

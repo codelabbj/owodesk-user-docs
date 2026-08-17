@@ -1,119 +1,117 @@
 ---
-sidebar_label: Employes
+sidebar_label: Employés
 sidebar_position: 2
 ---
 
-# Employes
+# Employés
 
-Onglet **Employes** (`/app/hr/employees`). Dossiers employes, departements et affectations.
+Onglet **Employés** (`/app/hr/employees`). Liste des dossiers employés, création, invitation et fiche détaillée.
 
 ## Code organisation
 
-Banniere **Code Organisation** avec bouton **Copier** : code utilise par les employes pour le pointage mobile.
+Bannière **Code Organisation** avec bouton **Copier** : code utilisé par les employés pour le **pointage mobile**.
 
-## Ajouter ou modifier un employe
+## Ajouter ou modifier un employé
 
-Bouton **Ajouter un employe**. Sections du formulaire :
+Bouton **Ajouter un employé**. Principales sections du formulaire :
 
-### Compte utilisateur
-
-- Lier un **compte utilisateur** existant (pre-remplit nom, email) ;
-- Ou cocher **Creer un compte utilisateur associe** : choix du **role** + email d'invitation envoye automatiquement.
-
-### Identite et poste
+### Identité et contact
 
 | Champ | Description |
 |-------|-------------|
-| **Numero employe** | Matricule (obligatoire, non modifiable apres creation) |
-| **Prenom / Nom** | Identite |
-| **Email / Telephone** | Coordonnees |
-| **Date d'embauche** | Date de debut |
-| **Departement** | Combobox (saisie libre ou existant) |
-| **Poste / Role** | Fonction |
-| **Type d'assignation** | Standard ou Terrain (terrain : pas de poste/lieu obligatoire pour le pointage) |
-| **Type de collaboration** | Salarie, Stagiaire ou Prestataire |
+| **Prénom / Nom** | Identité |
+| **Matricule / Numéro employé** | Obligatoire ; non modifiable après création |
+| **Email / Téléphone** | Coordonnées |
+| **WhatsApp (notifications)** | Numéro pour les notifications WhatsApp |
+| **Date / lieu de naissance**, **Adresse** | Optionnels selon votre usage |
+| **Contact CRM (même personne)** | Lien éventuel avec un contact CRM |
+
+À la création : option **Créer un compte utilisateur associé** (rôle + invitation par email).
+
+### Emploi
+
+| Champ | Description |
+|-------|-------------|
+| **Département** | Service (saisie libre ou existant) |
+| **Poste / Rôle** | Fonction |
+| **Type de collaboration** | Salarié, Stagiaire ou Prestataire |
+| **Type d’assignation** | **Standard** ou **Terrain** (terrain : contraintes de poste/lieu assouplies pour le pointage) |
+| **Date d’embauche** | Début |
+| **Salaire** + devise | Rémunération de référence (XOF, EUR, USD…) |
+| **Actif** | Statut du dossier |
 
 ### Stagiaire (si type Stagiaire)
 
-- Dates de **debut / fin de stage** ;
-- **Tuteur / responsable** ;
-- **Etablissement** et **sujet de stage** ;
-- Option **Doit etre paye** avec indemnite si applicable.
+- Dates de **début / fin de stage** ;
+- **Tuteur / responsable**, **établissement**, **sujet de stage** ;
+- **Doit être payé** (indemnité) ;
+- **Droit à la fiche de paie** (sinon le parcours paie peut passer par une facture stagiaire).
 
-### Remuneration
+### Déclaration
 
-- **Salaire de base** (ou indemnite de stage) + devise (XOF, EUR, USD) ;
-- **Statut** : Actif ou Inactif.
-
-### Declaration
-
-- Case **Employe declare** ;
-- Si coche : **Numero IFU** et **Numero CNSS**.
-
-### Fin de contrat (modification uniquement)
-
-- **Date de fin de contrat** et **motif**.
+- Case **Employé déclaré** ;
+- Si coché : **Numéro IFU** et **Numéro CNSS**.
 
 ### Lieux de travail
 
-- Selection parmi les lieux existants (tags cliquables) ;
-- **Ajouter un nouveau lieu** : nom + position sur la carte, bouton **Creer et assigner**.
+- Sélection parmi les lieux existants ;
+- Possibilité d’ajouter un lieu (lien avec les [lieux de travail](/modules/rh/lieux-de-travail) / entrepôts Stock).
 
 ### Horaire de travail
 
 - **Horaire entreprise** (planning global [Horaires](/modules/rh/horaires)) ;
-- Ou **Horaire personnalise** : grille jour par jour (ouvre, debut, fin, pause) + seuil de retard en minutes.
+- Ou **Horaire personnalisé** : grille jour par jour + seuil de retard.
 
 ## Filtres et recherche
 
 | Filtre | Options |
 |--------|---------|
 | **Statut** | Tous, Actifs, Inactifs |
-| **Type** | Tous, Salaries, Stagiaires, Prestataires |
-| **Departement** | Liste des departements |
-| **Recherche** | Nom, matricule, email, departement, poste |
+| **Type** | Tous, Salariés, Stagiaires, Prestataires |
+| **Département** | Liste des départements |
+| **Recherche** | Nom, matricule, email, département, poste |
 
-Bouton **Reinitialiser**.
+## Tableau des employés
 
-## Tableau des employes
+Colonnes typiques : **Employé**, **Numéro**, **Poste**, **Département**, **Salaire**, **Heure** / horaire (**Entreprise** ou personnalisé), **Statut**.
 
-Colonnes : Employe (lien fiche), Numero, Poste, Departement, Salaire, Horaire (Entreprise ou resume personnalise), Statut.
+Badges : **Stagiaire**, **Déclaré**, **Débauché le…** si applicable.
 
-Badges : Stagiaire, Declare, date de debauche si applicable.
-
-Menu **Actions** (trois points) :
-
-| Action | Effet |
-|--------|-------|
-| **Envoyer code d'activation** | Code pointage pour l'employe |
-| **Modifier** | Ouvre le formulaire |
-| **Debaucher** | Date et motif de fin (employes actifs) |
-| **Reactiver** | Remet un employe inactif en service |
+Actions courantes : ouvrir la fiche, **Modifier**, **Supprimer** (avec confirmation).
 
 ---
 
-## Fiche employe
+## Fiche employé
 
-Page `/app/hr/employees/{id}`, accessible en cliquant sur un employe.
+Page `/app/hr/employees/{id}`, accessible en cliquant sur un employé.
 
-### En-tete
+### En-tête
 
 - **Retour** vers la liste ;
-- **Modifier**, **Mettre fin au contrat**, **Desactiver / Reactiver**.
+- **Modifier**, **Mettre fin au contrat**, **Désactiver** / **Réactiver** ;
+- **Inviter sur la plateforme** (si l’employé a un email et pas encore de compte utilisateur).
 
 ### Profil
 
-Matricule, poste, departement, badge Terrain si applicable, telephone, email, date d'embauche, statut de paiement (a jour / en retard).
+Matricule, poste, département, badge **Terrain** si applicable, contacts, date d’embauche, statut **Actif / Inactif**, indicateur de paiement (**À jour** / **En retard**).
 
-### Sections
+### Sections principales
 
 | Section | Contenu |
 |---------|---------|
-| **Lieux de travail** | Lieux assignes |
-| **Informations de stage** | Periode, tuteur, ecole, sujet (stagiaires) |
-| **Salaire de base** | Montant, frequence, dernier paiement ; bouton **Modifier salaire** |
-| **Indicateurs** | Nombre de bulletins, total paye, en attente |
-| **Historique des paiements** | Liste des bulletins ; bouton **Payer** |
-| **Deductions & Prets** | Ajouter / modifier / supprimer (fixe recurrent, pret, ponctuel) |
-| **Primes automatiques** | Primes fixes ou ponctuelles |
-| **Documents** | Upload, telechargement, modification, suppression par document |
+| **Lieux de travail** | Lieux assignés pour le pointage |
+| **Informations de stage** | Période, tuteur, école, sujet (stagiaires) + note d’exclusion éventuelle de la paie standard |
+| **Temps & absences** | Liens **Voir la présence** et **Voir les congés** (ouvrent le [pointage](/modules/rh/presence) et les [congés](/modules/rh/conges-permissions) **filtrés sur cet employé** via `?employee=`) |
+| **Horaire de travail** | Affectation horaire entreprise ou personnalisé |
+| **Coordonnées bancaires** | Titulaire, banque, N° compte/RIB, SWIFT/BIC |
+| **Salaire de base** / **Indemnité de stage** | Montant, **fréquence** (Mensuel / Quinzaine / Hebdomadaire), **Modifier salaire** |
+| **Indicateurs** | Nombre de bulletins, total payé, en attente |
+| **Historique des paiements** | Liste + **Payer** / **Payer l’indemnité** |
+| **Déductions & Prêts** | Fixe récurrent, prêt, ponctuel |
+| **Primes automatiques** | Fixes ou ponctuelles (badge **Versée** si verrouillée) |
+| **Informations légales & déclaration** | Déclaré, IFU, CNSS ; **Attestation de travail** / **Attestation de stage** |
+| **Documents** | Upload par catégorie (Contrat, Pièce d’identité, CNSS, RIB, Certificat, Médical, Autre) |
+
+### Bon à savoir
+
+Depuis la fiche, **Voir la présence** et **Voir les congés** ne montrent que les données de **cet** employé (plus toute l’équipe).
