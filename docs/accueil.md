@@ -10,13 +10,17 @@ OwoDesk est votre logiciel de gestion d'entreprise tout-en-un : CRM, facturation
 
 Cette documentation vous guide pas a pas dans l'utilisation de chaque module.
 
-## Par ou commencer ?
+## Par où commencer ?
 
 | Situation | Commencez ici |
 |-----------|---------------|
-| **Premiere connexion** | [Premiers pas](/category/premiers-pas) |
+| **Première connexion** | [Premiers pas](/category/premiers-pas) |
 | **Configurer mon entreprise** | [Configurer son entreprise](/premiers-pas/configurer-entreprise) |
-| **Decouvrir un module** | Choisissez dans le menu ci-dessous |
+| **Multi-sociétés / OHADA / SYSCOHADA** | [Espace OHADA](/espace-ohada/) |
+| **Deuxième société** | [Créer une deuxième société](/espace-ohada/creer-deuxieme-societe) |
+| **Comptabilité SYSCOHADA** | [Comptabilité SYSCOHADA](/espace-ohada/comptabilite-syscohada) |
+| **Exporter mes données** | [Exporter / récupérer ses données](/espace-ohada/exporter-recuperer-donnees) |
+| **Découvrir un module** | Choisissez dans le menu ci-dessous |
 
 ## Modules disponibles
 

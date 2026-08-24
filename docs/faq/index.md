@@ -10,7 +10,11 @@ Deux causes possibles :
 
 ### Comment changer d'entreprise ?
 
-Cliquez sur votre profil en haut à droite et sélectionnez l'organisation souhaitée.
+Cliquez sur votre profil en haut à droite et sélectionnez l'organisation souhaitée. Voir aussi [Créer une deuxième société](/espace-ohada/creer-deuxieme-societe).
+
+### OwoDesk et OFS, c'est la même chose ?
+
+Non. Voir [OwoDesk ≠ OFS](/espace-ohada/owodesk-vs-ofs).
 
 ### J'ai oublié mon mot de passe
 
