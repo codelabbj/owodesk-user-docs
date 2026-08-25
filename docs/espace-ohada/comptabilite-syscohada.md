@@ -22,11 +22,11 @@ Fiche produit : [Comptabilité SYSCOHADA](https://www.owo.bj/comptabilite-syscoh
 
 Guides modules : [Comptabilité](/modules/comptabilite), [Plan](/modules/comptabilite/plan-comptable), [Balance](/modules/comptabilite/balance), [Grand livre](/modules/comptabilite/grand-livre), [Exercices](/modules/comptabilite/exercices), [Exports](/modules/comptabilite/exports)
 
-## Bientôt
+## Bientôt (exports seulement)
 
-Dans **États et exports** : export Excel « États OHADA » et export DGI portent le badge **Bientôt** — ne pas les présenter comme livrés.
+Dans **États et exports** : export Excel « États OHADA » et export DGI portent le badge **Bientôt** — ne pas les présenter comme livrés. La comptabilité SYSCOHADA (plan, balance, grand livre, clôture, FEC) est **déjà en production**.
 
-## Hors périmètre
+## Pas dans le produit (précision — ce n'est pas « SYSCOHADA hors périmètre »)
 
 - Pas de reporting **consolidé** de groupe
 - Pas d'écritures **intercompany** automatiques
