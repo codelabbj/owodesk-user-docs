@@ -1,3 +1,8 @@
+---
+title: Questions fréquentes
+description: "FAQ OwoDesk — compte, modules, facturation, stock, RH, multi-sociétés. OwoDesk n'est pas OFS ni Owotech."
+---
+
 # Questions fréquentes
 
 ## Accès et compte

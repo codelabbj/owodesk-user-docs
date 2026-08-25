@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Comptabilité SYSCOHADA dans OwoDesk
+description: "Comptabilité SYSCOHADA OwoDesk en production — plan, journaux, balance, grand livre, clôture, export FEC. Pas de consolidation de groupe."
 ---
 
 # Comptabilité SYSCOHADA dans OwoDesk

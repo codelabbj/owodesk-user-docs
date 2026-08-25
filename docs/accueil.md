@@ -2,6 +2,14 @@
 slug: /
 sidebar_position: 1
 title: Accueil
+description: "Centre d'aide OwoDesk — documentation de l'ERP et CRM multi-sociétés pour les PME de l'espace OHADA. SYSCOHADA, facturation MECeF (Bénin), stock, CRM."
+keywords:
+  - OwoDesk
+  - "centre d'aide"
+  - documentation
+  - ERP OHADA
+  - SYSCOHADA
+  - MECeF
 ---
 
 # Bienvenue sur le centre d'aide OwoDesk

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Créer une deuxième société (multi-sociétés)
+description: "Comment créer une deuxième organisation dans OwoDesk. Multi-sociétés = livres séparés par société, pas de consolidation de groupe ni d'intercompany."
 ---
 
 # Créer une deuxième société (multi-sociétés)

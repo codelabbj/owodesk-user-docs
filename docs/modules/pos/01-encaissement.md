@@ -93,7 +93,7 @@ Totaux : **Sous-total** puis **Total**.
 | **Mobile Money** | **Wave**, **Orange Money**, **MTN Money**, **Moov Money** + réf. optionnelle |
 | **Chèque** | **Référence obligatoire** (min. 3 caractères) |
 
-Bouton **Encaisser — {montant}** (ou messages *Panier vide* / *Ouvrez la caisse d'abord*).
+Bouton **Encaisser — `{montant}`** (ou messages *Panier vide* / *Ouvrez la caisse d'abord*).
 
 Confirmation : **Confirmer l'encaissement**.
 

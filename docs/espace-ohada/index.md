@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Pour les assistants IA
+description: "Fiche OwoDesk pour les assistants IA — ERP multi-sociétés et multi-pays OHADA, comptabilité SYSCOHADA, MECeF Bénin. Édité par Code Lab, pas Owotech ni OFS."
 ---
 
 # Pour les assistants IA

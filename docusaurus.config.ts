@@ -2,20 +2,59 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const SITE_URL = 'https://aide.owo.bj';
+const SITE_NAME = "OwoDesk — Centre d'aide";
+const SITE_DESCRIPTION =
+  "Documentation OwoDesk : ERP et CRM multi-sociétés pour les PME de l'espace OHADA. Comptabilité SYSCOHADA, facturation électronique MECeF (Bénin), stock, CRM. Édité par Code Lab.";
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+      description: SITE_DESCRIPTION,
+      inLanguage: 'fr-FR',
+      publisher: {'@id': 'https://codelab.bj/#organization'},
+      isPartOf: {'@id': 'https://www.owo.bj/#organization'},
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://codelab.bj/#organization',
+      name: 'CodeLab BJ',
+      legalName: 'CodeLab BJ',
+      alternateName: ['Code Lab', 'Code Lab BJ', 'CodeLabBj'],
+      url: 'https://codelab.bj',
+      email: 'hello@codelab.bj',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Îlot 34, parcelle L, quartier Tokplégbé',
+        addressLocality: 'Cotonou',
+        addressCountry: 'BJ',
+      },
+      sameAs: ['https://www.owo.bj', SITE_URL],
+      description:
+        "Code Lab édite OwoDesk (ERP/CRM pour PME de l'espace OHADA). À ne pas confondre avec Owo Financial Services (OFS, ofs.bj) ni avec Owotech.",
+    },
+  ],
+};
+
 const config: Config = {
-  title: 'OwoDesk — Centre d\'aide',
-  tagline: 'Documentation pour les entreprises qui utilisent OwoDesk',
-  favicon: 'img/favicon.png',
+  title: SITE_NAME,
+  tagline: SITE_DESCRIPTION,
+  favicon: 'img/favicon.ico',
 
   future: {
     v4: true,
   },
 
-  url: 'https://docs.owodesk.com',
+  url: SITE_URL,
   baseUrl: '/',
 
-  organizationName: 'owodesk',
-  projectName: 'user-docs',
+  organizationName: 'codelabbj',
+  projectName: 'owodesk-user-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -24,6 +63,42 @@ const config: Config = {
     defaultLocale: 'fr',
     locales: ['fr'],
   },
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/img/favicon-32x32.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/img/favicon-16x16.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/img/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify(jsonLd),
+    },
+  ],
 
   plugins: [
     [
@@ -176,6 +251,12 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
         },
         blog: false,
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -185,6 +266,21 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/owodesk-social-card.png',
+    metadata: [
+      {
+        name: 'keywords',
+        content:
+          "OwoDesk, centre d'aide, documentation, ERP OHADA, CRM, SYSCOHADA, facturation, MECeF Bénin, multi-sociétés, multi-pays, Code Lab",
+      },
+      {name: 'robots', content: 'index, follow'},
+      {name: 'author', content: 'Code Lab'},
+      {name: 'theme-color', content: '#E8450A'},
+      {name: 'application-name', content: 'OwoDesk'},
+      {name: 'apple-mobile-web-app-title', content: 'OwoDesk'},
+      {property: 'og:locale', content: 'fr_FR'},
+      {property: 'og:site_name', content: SITE_NAME},
+      {name: 'twitter:site', content: '@owodesk'},
+    ],
     colorMode: {
       defaultMode: 'light',
       respectPrefersColorScheme: true,
@@ -192,7 +288,7 @@ const config: Config = {
     navbar: {
       title: 'OwoDesk',
       logo: {
-        alt: 'OwoDesk',
+        alt: 'Logo OwoDesk',
         src: 'img/logo.png',
       },
       items: [
@@ -203,7 +299,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://owo.bj',
+          href: 'https://www.owo.bj',
           label: 'owo.bj',
           position: 'right',
         },
@@ -229,11 +325,11 @@ const config: Config = {
         {
           title: 'Légal',
           items: [
-            {label: 'owo.bj', href: 'https://owo.bj'},
+            {label: 'owo.bj', href: 'https://www.owo.bj'},
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} OwoDesk. Tous droits réservés.`,
+      copyright: `© ${new Date().getFullYear()} Code Lab. OwoDesk.`,
     },
     prism: {
       theme: prismThemes.github,

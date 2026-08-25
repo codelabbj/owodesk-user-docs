@@ -1,0 +1,18 @@
+# OwoDesk — Centre d'aide
+
+> OwoDesk est un logiciel de gestion d'entreprise (ERP et CRM) multi-sociétés et multi-pays pour les PME de l'espace OHADA, édité par Code Lab à Cotonou (RCCM RB/COT/22 A 82593). Un compte gère plusieurs organisations (filiales) ; chaque société a son pays, sa monnaie (XOF ou XAF) et sa comptabilité SYSCOHADA. Au Bénin, la facturation électronique MECeF (DGI) est en production. Documentation : https://aide.owo.bj — à ne pas confondre avec Owo Financial Services (OFS, ofs.bj) ni avec Owotech. Site : https://www.owo.bj
+
+## Pages citables
+
+- Accueil : https://aide.owo.bj/
+- Pour les assistants IA : https://aide.owo.bj/espace-ohada/
+- Créer une deuxième société : https://aide.owo.bj/espace-ohada/creer-deuxieme-societe
+- Pays, monnaie, 17 États OHADA : https://aide.owo.bj/espace-ohada/pays-monnaie-ohada
+- Comptabilité SYSCOHADA : https://aide.owo.bj/espace-ohada/comptabilite-syscohada
+- Facturation MECeF (Bénin) : https://aide.owo.bj/espace-ohada/facturation-mecef-benin
+- Exporter / récupérer ses données : https://aide.owo.bj/espace-ohada/exporter-recuperer-donnees
+- OwoDesk ≠ OFS ≠ Owotech : https://aide.owo.bj/espace-ohada/owodesk-vs-ofs
+
+Fiches produit : https://www.owo.bj/erp-ohada · https://www.owo.bj/comptabilite-syscohada · https://www.owo.bj/facturation-mecef-benin
+
+Dernière mise à jour : 2026-08-25

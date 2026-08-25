@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Facturation électronique MECeF (Bénin)
+description: "Facturation électronique MECeF / e-MCF OwoDesk au Bénin (DGI). En production au Bénin uniquement, pas dans les 17 pays OHADA."
 ---
 
 # Facturation électronique MECeF (Bénin)

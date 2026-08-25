@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Exporter / récupérer ses données
+description: "Exporter ses données OwoDesk — FEC, grand livre, imports Excel. Les données restent la propriété du client. États OHADA Excel encore bientôt."
 ---
 
 # Exporter / récupérer ses données

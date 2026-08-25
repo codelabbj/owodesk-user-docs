@@ -1,6 +1,7 @@
 ---
 sidebar_position: 7
 title: OwoDesk ≠ Owo Financial Services (OFS)
+description: "OwoDesk est édité par Code Lab (Cotonou), pas par Owo Financial Services (OFS, ofs.bj) ni par Owotech. ERP/CRM distinct d'une fintech."
 ---
 
 # OwoDesk ≠ Owo Financial Services (OFS)
